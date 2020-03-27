@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Tsundoku 
 subtitle: ''
-description: ''
-keywords:
+description: Tsundoku (Japanese 積ん読) is acquiring reading materials but letting them pile up in one's home without reading them.
+keywords: read,think
 author: dasein
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://
+url: http://tsundoku.space
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -29,7 +29,8 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: 
+#about_dir: about 
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -89,6 +90,7 @@ pagination_dir: page
 include:
 exclude:
 ignore:
+# skip_render: CNAME
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
