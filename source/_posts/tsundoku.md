@@ -5,5 +5,5 @@ tags:
 ---
 *Tsundoku* (Japanese: 積ん読) is acquiring reading materials but letting them pile up in one's home without reading them.
 
-翻译成中文就是指：买书回来却不读的行为。
+翻译成中文就是：买书回来却不读的行为。
 
