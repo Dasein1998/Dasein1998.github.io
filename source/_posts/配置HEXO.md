@@ -1,7 +1,7 @@
 ---
 title: 配置HEXO
 date: 2020-01-26 16:55:51
-tags:
+tags: 折腾
 ---
 
 ## HEXO安装
