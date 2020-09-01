@@ -6,7 +6,7 @@ tags: 英语
 
 ---
 
-> roading:    1%
+> loading:    1%
 
 
 

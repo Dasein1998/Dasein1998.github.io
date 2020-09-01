@@ -104,11 +104,4 @@ deploy:
 - type: git
   repo:
     github: git@github.com:Dasein1998/Dasein1998.github.io.git
-  branch: master
-
-backup:
-  type: git
-  theme: cactus
-  message: Back up my blog
-  repository: 
-    github：git@github.com:Dasein1998/Dasein1998.github.io.git,backup
+  branch: blog

@@ -52,6 +52,5 @@ git clone git@github.com:GitHubname/GitHubname.github.io.git
 Git bash依次执行下列指令：
 >npm install hexo
 >npm install
->npm install 
->hexo-deployer-git
+>npm install  hexo-deployer-git
 
