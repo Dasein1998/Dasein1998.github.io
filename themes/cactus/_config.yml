@@ -17,7 +17,7 @@ nav:
   home: /
   #about: /about/
   articles: /archives/
-  projects: https://github.com/Dasein1998
+  projects: https://github.com/Dasein1998/Dasein1998.github.io
 
 
 # Links to your social media accounts.
@@ -25,11 +25,11 @@ nav:
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
-  github: https://github.com/Dasein1998/Dasein1998.github.io
+  github: https://github.com/Dasein1998
   #twitter: /
-  telegram: https://t.me/dasein1998
+  #telegram: /
   #linkedin: /
-  mail: mailto:rbw1998@163.com
+  mail: mailto:dasein1998@gmail.com
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
@@ -131,8 +131,8 @@ open_graph:
 
 # Fill in your Disqus Comments Shortname to enable Disqus comments.
 disqus:
-  enabled: false
-  shortname: cactus-1
+  enabled: true
+  shortname: https-tsundoku-space
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
