@@ -14,7 +14,7 @@
 <meta property="og:description" content="因为写博客，以及闲的没事喜欢折腾，还是会经常用到Windows默认的shell： Powershell微软将Powershell开源后，不仅可以在Windows还可以在Linux，Mac os上使用powershell。本文使用的是Powershell7，在此记录一下进行的一些简单配置。 PowerShell的官方文档：https:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;powers">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-23T15:23:23.000Z">
-<meta property="article:modified_time" content="2021-02-24T04:56:23.841Z">
+<meta property="article:modified_time" content="2021-02-24T09:46:41.731Z">
 <meta property="article:author" content="dasein">
 <meta property="article:tag" content="折腾">
 <meta name="twitter:card" content="summary">
@@ -132,7 +132,7 @@
       
         <time datetime="2021-02-23T15:23:23.000Z" itemprop="datePublished">2021-02-23</time>
         
-        (Updated: <time datetime="2021-02-24T04:56:23.841Z" itemprop="dateModified">2021-02-24</time>)
+        (Updated: <time datetime="2021-02-24T09:46:41.731Z" itemprop="dateModified">2021-02-24</time>)
         
       
     </div>
@@ -195,7 +195,35 @@
 </ol>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Invoke-Expression</span> (&amp; &#123; (lua /path/to/z.lua -<span class="literal">-init</span> powershell) <span class="operator">-join</span> <span class="string">&quot;`n&quot;</span> &#125;)</span><br><span class="line">/path/to/z.lua   就是z.lua解压的目录</span><br></pre></td></tr></table></figure>
 
-<h4 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h4><p>恩，从网上抄了一个代理的脚本</p>
+<p>记录一下：</p>
+<ul>
+<li>zsh中使用，需要在.zshrc中添加</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &quot;$(lua &#x2F;path&#x2F;to&#x2F;z.lua --init zsh)&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Fish Shell中使用，创建文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;.config&#x2F;fish&#x2F;conf.d&#x2F;z.fish</span><br></pre></td></tr></table></figure>
+
+<p>内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source (lua &#x2F;path&#x2F;to&#x2F;z.lua --init fish | psub)</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lua &#x2F;path&#x2F;to&#x2F;z.lua --init fish &gt; ~&#x2F;.config&#x2F;fish&#x2F;conf.d&#x2F;z.fish</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Bash中使用，在.bashrc中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &quot;$(lua &#x2F;path&#x2F;to&#x2F;z.lua --init bash)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>为了使用增强模式则：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &quot;$(lua &#x2F;path&#x2F;to&#x2F;z.lua --init bash enhanced once)&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h4 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h4><p>恩，从网上抄了一个代理的脚本，将其复制到<code>$PROFILE</code>中。</p>
 <p><code>Env-Proxy</code>设置系统代理</p>
 <p><code>Git-Proxy</code>设置git代理</p>
 <p><code>Scoop-Proxy</code>设置scoop代理等 具体阅读脚本了。（我也看不懂 但是能用）</p>
