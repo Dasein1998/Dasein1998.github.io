@@ -14,7 +14,7 @@
 <meta property="og:description" content="过年后买了台阿里云的学生机，1核2g 1M带宽。 已搭建：  TinyTinyRSS Frp  未搭建（未完成）：  Terraria私服 OLAINDEX (缺个域名)  在本文简要介绍一下以上内容。 已完成一.TinyTinyRSSRSS（全称：RDF Site Summary；Really Simple Syndication[2]），中文译作简易信息聚合[3]，也称聚合内容[4]，是一种消">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-31T10:18:18.000Z">
-<meta property="article:modified_time" content="2021-03-08T13:34:23.015Z">
+<meta property="article:modified_time" content="2021-03-25T06:18:47.486Z">
 <meta property="article:author" content="dasein">
 <meta property="article:tag" content="折腾">
 <meta name="twitter:card" content="summary">
@@ -132,7 +132,7 @@
       
         <time datetime="2020-08-31T10:18:18.000Z" itemprop="datePublished">2020-08-31</time>
         
-        (Updated: <time datetime="2021-03-08T13:34:23.015Z" itemprop="dateModified">2021-03-08</time>)
+        (Updated: <time datetime="2021-03-25T06:18:47.486Z" itemprop="dateModified">2021-03-25</time>)
         
       
     </div>
@@ -168,7 +168,7 @@
 <p>RSS的火爆已经是21世纪初期的事情了，在Google Reader于2013年停止服务宣告RSS退出历史舞台。在新闻媒体，微博，今日头条等聚合类资讯应用占领绝大多数市场的时代，只有极少的用户会继续使用RSS。现在很多平台的内容也不支持RSS订阅，比如知乎，微信公众号，B站等大多数现代媒体平台，支持RSS大多是个人或小团体的资讯平台，如个人博客，爱范儿，煎蛋等。（曾经有一段时间 有第三方平台提供微信公众号文章的RSS订阅，后来被微信封杀了，比如16，17年的微广场）现在有人做了个开源的RSS生成器 <a target="_blank" rel="noopener" href="https://docs.rsshub.app">RSSHub</a> ， 里面聚合了上百家网站的RSS订阅方式，包括微信公众号，知乎文章专栏等。</p>
 <p>与诸如Inoreader等RSS服务不同，TinyTinyRSS是在自己服务器搭建的RSS服务，功能足够，配合RSSHub使用可以订阅很多个性化内容，ttrss可以在浏览器中或者适配的移动端软件中使用，我电脑端直接使用网页版，手机用的FeedMe。浏览器还可以安装RSSHub的拓展插件，通过插件连接自己的TinyTinyRss服务，在浏览可以RSS订阅的网站时可以一键通过RSSHub和TinyTinyRss的联动来将网站添加到订阅源中。</p>
 <h2 id="二-Frp"><a href="#二-Frp" class="headerlink" title="二.Frp"></a>二.Frp</h2><p>我有一个阿里云的学生机，也就有了一个公网的IP。于是可以利用我的公网IP实现内网穿透。总所周至，ipv4地址在几年前就已经用完了，很多人的家里都没有公网IP，都是运营商的大局域网分配的IP地址。而在局域网内像要访问其他局域网，比如在家要访问学校的设备，就无法直接连接，此时需要一个公网的服务器做节点，两台或多台处在自己的局域网的设备可以通过与公网服务器连接来达成相互连接。通过这个方法可以随时随地的远程控制处在不同局域网的设备。</p>
-<p>Frp就是达成这个链接方式的工具。 在服务器客户端分别安装<a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">Frp</a>，编辑ini文件，自定义端口和验证方式并让其后台运行。就完成了服务器和客户端的链接。此时可以通过访问公网地址和相应端口来访问局域网的设备。通过Remote Desktop（RDP协议）可以远程控制windows系统，通过ssh控制linux系统，还可以通过HTTP控制家里的路由器。</p>
+<p>Frp就是达成这个链接方式的工具。 在服务器客户端分别安装<a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">Frp</a>，编辑ini文件，自定义端口和验证方式并让其后台运行。就完成了服务器和客户端的链接。此时可以通过访问公网地址和相应端口来访问局域网的设备。通过Remote Desktop（RDP协议）可以远程控制windows系统，通过ssh控制linux系统，可以通过HTTP(S)控制家里的路由器。</p>
 <h1 id="待完成："><a href="#待完成：" class="headerlink" title="待完成："></a>待完成：</h1><h3 id="1-Terraria私服"><a href="#1-Terraria私服" class="headerlink" title="1. Terraria私服"></a>1. Terraria私服</h3><p>《<strong>泰拉瑞亚</strong>》（英语：<strong>Terraria</strong>）是一款2D<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/沙盒类游戏">沙盒模拟游戏</a>，由Re-Logic开发。游戏2011年5月16日最初发布在<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Microsoft_Windows">Windows</a>平台，此后，陆续发布了支持其他操作系统、主机、智能手机和平板电脑等的版本。泰拉瑞亚的游戏特色是在一个<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/过程生成">随机生成</a>的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/2D">2D</a>世界里探索、创造、建筑，并与各种生物战斗。游戏发布时受到普遍积极的评价，其沙盒元素颇受好评。截止到2020年4月累积销量逾3000万。                        —摘自Terraria的WiKi 词条</p>
 <p><a target="_blank" rel="noopener" href="https://terraria-zh.gamepedia.com/%E6%9C%8D%E5%8A%A1%E5%99%A8#.E5.BC.80.E6.9C.8D.E6.96.B9.E6.B3.95_.28Linux.29">Terraria</a> 官方wiki提供了自建服务器的方法和<a target="_blank" rel="noopener" href="https://terraria.org/system/dedicated_servers/archives/000/000/039/original/terraria-server-1405.zip?159130136">安装包</a> 。看网上说法是搭建需要1.5g左右内存，支持两-三人玩耍。因为暂时没有玩这个的兴趣，于是先搁置了。</p>
 <h3 id="2-OLAINDEX"><a href="#2-OLAINDEX" class="headerlink" title="2. OLAINDEX"></a>2. OLAINDEX</h3><p>OLAINDEX是挂载Onedrive在网页上的工具，可以利用ondrive的教育版和商业版的1T的空间当作一个下载站。</p>
