@@ -9,6 +9,15 @@ categories:
 ---
 [TOC]
 本文主要记录一下自己安装Arch以及其衍生版本所需要完成的操作，以防每次都去谷歌。
+
+
+
+### 安装Keyring
+
+```bash
+pacman-key --populate
+```
+
 ### 修改源
 
 源的位置为：`/etc/pacman.d/mirrorlist` 

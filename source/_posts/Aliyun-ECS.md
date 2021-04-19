@@ -36,8 +36,59 @@ RSS的火爆已经是21世纪初期的事情了，在Google Reader于2013年停�
 
 我有一个阿里云的学生机，也就有了一个公网的IP。于是可以利用我的公网IP实现内网穿透。总所周至，ipv4地址在几年前就已经用完了，很多人的家里都没有公网IP，都是运营商的大局域网分配的IP地址。而在局域网内像要访问其他局域网，比如在家要访问学校的设备，就无法直接连接，此时需要一个公网的服务器做节点，两台或多台处在自己的局域网的设备可以通过与公网服务器连接来达成相互连接。通过这个方法可以随时随地的远程控制处在不同局域网的设备。
 
-Frp就是达成这个链接方式的工具。 在服务器客户端分别安装[Frp](https://github.com/fatedier/frp)，编辑ini文件，自定义端口和验证方式并让其后台运行。就完成了服务器和客户端的链接。此时可以通过访问公网地址和相应端口来访问局域网的设备。通过Remote Desktop（RDP协议）可以远程控制windows系统，通过ssh控制linux系统，还可以通过HTTP控制家里的路由器。
+Frp就是达成这个链接方式的工具。 在服务器客户端分别安装[Frp](https://github.com/fatedier/frp)，编辑ini文件，自定义端口和验证方式并让其后台运行。就完成了服务器和客户端的链接。此时可以通过访问公网地址和相应端口来访问局域网的设备。通过Remote Desktop（RDP协议）可以远程控制windows系统，通过ssh控制linux系统，可以通过HTTP(S)控制家里的路由器。
 
+## 三.Gitea
+
+Gitea是用go写的自建开源Git服务软件。可以较为容易的在自己的服务器上搭建，可以使用sqlite3作为数据库。
+
+主要思路：
+
+1. 建立名为git的用户，并授于权限
+
+```
+sudo adduser --system --group --disabled-password --shell /bin/bash --home /home/git --gecos 'Git Version Control' git
+```
+
+2. 创建文件
+
+3.   ```
+   sudo mkdir -p /var/lib/gitea/{custom,data,log}
+   sudo chown -R git:git /var/lib/gitea/
+   sudo chmod -R 750 /var/lib/gitea/
+   sudo mkdir /etc/gitea
+   sudo chown root:git /etc/gitea
+   sudo chmod 770 /etc/gitea
+   ```
+
+4. 下载gitea 可以去https://dl.gitea.io 中查看最新的版本
+
+5. ```
+   wget -O gitea https://dl.gitea.io/gitea/1.13.6/gitea-1.13.6-linux-amd64
+   ```
+
+6. 将程序移到  /usr/local/bin
+
+7. ```
+   mv gitea /usr/local/bin
+   ```
+
+8. 下载写好的systemd代码并放入/etc/systemd/system/文件夹
+
+9. ```
+   sudo wget https://raw.githubusercontent.com/go-gitea/gitea/master/contrib/systemd/gitea.service -P /etc/systemd/system/
+   ```
+
+10. 启动gitea的systemd服务
+
+11. ```
+    sudo systemctl daemon-reload
+    sudo systemctl enable --now gitea
+    ```
+
+12. 默认会在3000端口开启网页控制面板。可以通过 服务器地址:3000 访问
+
+ps：配置文件位置/etc/gitea/app.ini 
 
 
 
