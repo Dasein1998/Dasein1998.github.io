@@ -46,6 +46,12 @@ alias unsetss='unset all_proxy'
 
 ---
 
+## 默认用户
+
+wsl2设置默认用户登录：arch config --default-user root 
+
+---
+
 ### 安装ohmyzsh 
 
 ```curl
@@ -53,6 +59,14 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ```
 
 打开`.zshrc`，找到`ZSH_THEME="robbyrussell"`，把‘’里的改成自己喜欢的图像，比如我喜欢的**lambda**
+
+卸载oh-my-zsh：
+
+```bash
+uninstall_oh_my_zsh
+```
+
+
 
 ---
 

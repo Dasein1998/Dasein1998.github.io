@@ -32,12 +32,10 @@ pacman-key --populate
 
 ​	安装AUR支持：
 
-```
+```bash
 sudo pacman -Syu 
 sudo pacman -S archlinuxcn-keyring
 ```
-
-
 
 ### SSH
 
