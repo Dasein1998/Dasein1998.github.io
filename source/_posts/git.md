@@ -130,4 +130,21 @@ SSH文档：[阮一峰的SSH教程](http://wangdoc.com/ssh)
    git push
    ```
 
-   
+   FAQ:
+
+   1. 出现fatal: No configured push destination.
+
+      ```bash
+      git add .
+      git commit -m %DATE%
+      git push
+      ```
+
+      解决方案：
+
+      ```bash
+      git remote add origin https://github.com/xxxxx/xxxxx.git 
+      git push -u origin master
+      ```
+
+      

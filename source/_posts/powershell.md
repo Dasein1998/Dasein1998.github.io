@@ -130,7 +130,7 @@ lua /path/to/z.lua --init fish > ~/.config/fish/conf.d/z.fish
 
 `Git-Proxy`设置git代理
 
-`Scoop-Proxy`设置scoop代理等 具体阅读脚本了。（我也看不懂 但是能用）
+`Scoop-Proxy`设置scoop代理等 具体阅读脚本。（我也看不懂 但是能用）
 
 
 
@@ -270,3 +270,35 @@ if ($args[0] -in "set", "get", "del") {
 ```
 Set-Service beep -StartupType disabled
 ```
+
+## 安装和重装后恢复scoop
+
+安装scoop：
+
+  > iwr -useb get.scoop.sh | iex
+
+重装系统后，恢复scoop
+1. 清除数据重装
+    1. 重装系统之前, 先完整复制用户目录下的 scoop 文件夹到别的地方
+    
+	2. 重装系统之后, 将 scoop 文件夹粘贴回去用户目录
+	3. 在环境变量设置中, 新建一个用户变量, 名字为 SCOOP, 值为当前 scoop 文件夹的地址, 即:
+	  ```
+	  C:\Users\xxxx\scoop
+	  ```
+	4. 允许脚本执行:
+	  ```
+	  set-executionpolicy remotesigned -s currentuser
+	  ```
+	5. 双击用户变量中的 path, 新建一个路径, 填入 :
+	  ```
+	  %SCOOP%\shims
+	  ```
+	6. 管理员权限 powershell 中运行:
+	  ```
+	  scoop reset *
+	  ```
+        即可恢复所有软件的正常使用.
+2. 未清除数据重装
+
+    从上述第三步开始。
