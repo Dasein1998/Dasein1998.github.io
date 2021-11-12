@@ -48,7 +48,11 @@ alias unsetss='unset all_proxy'
 
 ## 默认用户
 
-wsl2设置默认用户登录：arch config --default-user root 
+wsl2设置默认用户登录：
+
+```
+arch config --default-user root 
+```
 
 ---
 
@@ -100,3 +104,36 @@ export GOPROXY=https://goproxy.cn
 
 则可以继续安装yay了。
 
+## WSL迁移
+
+关闭正在运行的WSL
+
+```
+wsl -t <DistributionName>
+```
+
+比如Arch，则为：  
+
+```
+wsl -t Arch
+```
+
+以下皆用Arch代表<DistributionName>
+
+```
+wsl --export Arch D:\arch.tar
+```
+
+表示将Arch导出到`D:\arch.tar`。
+
+`wsl --import <DistributionName> <InstallLocation> <FileName>`
+
+表示将导出的wsl文件导入到<InstallLocation>中。
+
+```
+wsl --import Arch D:/Arch/ D:/arch.tar
+```
+
+表示将导出的`D:\arch.tar`，导入到`D:/Arch/`文件夹中。
+
+等待几分钟后，即可继续使用Arch-wsl了。此时可以在D:/Arch/文件夹中看到`D:\Arch\ext4.vhdx`文件了。
