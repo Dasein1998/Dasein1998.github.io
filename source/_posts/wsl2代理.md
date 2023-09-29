@@ -56,7 +56,7 @@ arch config --default-user root
 
 ---
 
-### 安装ohmyzsh 
+### 安装ohmyzsh
 
 ```curl
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

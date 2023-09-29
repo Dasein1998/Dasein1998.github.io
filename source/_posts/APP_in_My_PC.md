@@ -14,7 +14,7 @@ tags:
 	1. 可选桌面：i3wm，KDE，Deepin，Sway
 	2. 安装方式：WSL  or 双系统
 	3. 备选：Manjaro
-2. **Emacs+[Spacemacs](https://github.com/syl20bnr/spacemacs) ： **_**同上**_ （但是从来没用过）
+2. **Emacs+[Spacemacs](https://github.com/syl20bnr/spacemacs) ：** _**同上**_ （但是从来没用过）
 2. [**Vscode**](http://code.visualstudio.com)**+ Vim ：**_**为了vim的快捷键**_
 2. [**Vivaldi**](https://vivaldi.com/zh-hans/) ：***浏览器***
 	1. Vimium C：Vim快捷键方式浏览网页
@@ -26,14 +26,14 @@ tags:
 	7. Hypothesis：文本标注
 	8. Simpread：简阅，解析页面网页，转化为适合阅读的模式。然后可以配合多种工具来导出页面。很适合和各种笔记软件协同。
 	9. Simple Outliner：为页面生成大纲。
-	10. Bark：一个推送服务，利用苹果的推送渠道，推送消息到IPhone上
+	10. Bark：一个推送服务，利用苹果的推送渠道，推送网站和消息到IPhone上
 5. [**坚果云**](http://www.jianguoyun.com)**：**_**同步+WebDav**_
 5. **QQ+Wechat+Telagram：**_**通讯**_
 5. [**Zsh**](http://www.zsh.org)**+**[**oh my zsh**](https://github.com/ohmyzsh/ohmyzsh/wiki)+***lambda theme*** 在WSL中使用，PowerShell中使用oh-my-posh进行替代
 5. [**Office**](https://otp.landian.vip/zh-cn/)**：**_**无它，没得选**_
 5. **Texlive：**_**LaTex环境**_
 5. [**Calibre**](calibre-ebook.com)**：**_**Epub+Mobi+azw3阅读和转换工具**_
-5. [**Fiddle**](http://www.telerik.com/download/fiddler)**：**_**为了让UWP走代理  **_
+5. [**Fiddle**](http://www.telerik.com/download/fiddler)**：** _**为了让UWP走代理**_
 5. [**Rime**](https://rime.im)**：**_**输入法 + 通过坚果云云同步个人配置**_
 5. [**Potpalyer**](http://potplayer.daum.net)**：**_**播放器**_
 5. [**SumatraPDF**](https://www.sumatrapdfreader.org/free-pdf-reader.html) : **一个十分精简的PDF阅读软件**

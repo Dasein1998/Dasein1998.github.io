@@ -3,7 +3,7 @@
 title: 修改个人网站配色 
 date: 2021-11-12 13:13:13
 tags: 
-- 闲死
+- 折腾
 
 ---
 
@@ -27,3 +27,13 @@ $color-quote = #9E7A7A
 $highlight = hexo-config("highlight") || "github"
 ```
 效果参考博客效果。
+
+更改字体大小：位置在`themes\cactus\source\css\_variables.styl`
+默认大小为14。
+```css
+$font-size = 15px
+```
+
+# ref
+[@font-face — Stylus 中文文档 | Stylus 中文网](https://www.stylus-lang.cn/docs/font-face.html)
+

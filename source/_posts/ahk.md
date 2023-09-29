@@ -3,8 +3,8 @@
 title: AutoHotKey脚本的个人使用
 date: 2021-10-29 14:14:14
 tags: 
-- 折腾
-- 软件
+- 快捷键
+- 自动化
 categories: 
 - 工具
 

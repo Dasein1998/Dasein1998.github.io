@@ -3,6 +3,7 @@ title: Manjaro+i3wm配置
 date: 2021-01-26 18:18:18
 tags: 
 - 折腾
+- Linux
 ---
 
 

@@ -4,6 +4,7 @@ title: 记录HEXO使用中踩的坑
 date: 2021-02-24 16:16:16
 tags: 
 - 折腾
+- HEXO
 categories: 
 - 工具 
 

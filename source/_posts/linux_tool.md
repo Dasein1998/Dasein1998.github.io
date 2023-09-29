@@ -4,6 +4,7 @@ title: 提高Linux命令行体验的工具
 date: 2021-10-22 14:14:14
 tags: 
 - 折腾
+- Linux
 categories: 
 - 工具
 ---

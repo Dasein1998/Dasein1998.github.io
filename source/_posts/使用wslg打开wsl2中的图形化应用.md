@@ -1,0 +1,30 @@
+---
+
+title: 使用wslg打开wsl2中的图形化应用
+date: 20221119 15:40:53
+tags: 
+- 折腾
+categories: 
+- 
+---
+最近，WSL2更新1.0版本，以及支持了systemd，wslg在win10上也总算可用于打开wsl2中的应用了。
+我的笔记本是2k屏，直接打开wsl2中的应用会发现字体很糊，于是去谷歌上看其它人的解决方法。
+最后摸索出来的是，不要设置wslg的分辨率，而是在linux中修改GKD和QT的缩放来支持高分屏。
+比如在`~/.profile`中添加，或者`.bashrc`中添加
+```bash
+export QT_SCALE_FACTOR=2 
+export GDK_SCALE=2 
+export GDK_DPI_SCALE=0.5
+```
+然后重启 wsl，`wsl.exe -t arch`。
+再打开linux应用就可以看到缩放得到了应用。
+
+---
+启用systemd，只需要在bash中输入
+```bash
+echo -e "[boot]\nsystemd=true" | sudo tee -a /etc/wsl.conf
+
+```
+
+# Reference
+[WSL 2 上启用微软官方支持的 systemd - wswind - 博客园](https://www.cnblogs.com/wswind/p/wsl2-official-systemd.html)
