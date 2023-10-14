@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="HEXO安装安装nodejs 12345安装nodejs：去https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; 下载安装npm install -g hexo-cli 安装hexo  hexo initnpm installnpm install hexo-deployer-git      Git登陆12345git config --global user.name &quot;你的GitHub用户">
+    <meta name="description" content="HEXO安装安装nodejs 12345安装nodejs：去https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; 下载安装npm install -g hexo-cli 安装hexohexo initnpm installnpm install hexo-deployer-git    Git登陆12345git config --global user.name &quot;你的GitHub用户名&amp;qu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="配置HEXO">
 <meta property="og:url" content="https://dasein.site/2020/01/26/Install_HEXO/index.html">
 <meta property="og:site_name" content="Dasein">
-<meta property="og:description" content="HEXO安装安装nodejs 12345安装nodejs：去https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; 下载安装npm install -g hexo-cli 安装hexo  hexo initnpm installnpm install hexo-deployer-git      Git登陆12345git config --global user.name &quot;你的GitHub用户">
+<meta property="og:description" content="HEXO安装安装nodejs 12345安装nodejs：去https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; 下载安装npm install -g hexo-cli 安装hexohexo initnpm installnpm install hexo-deployer-git    Git登陆12345git config --global user.name &quot;你的GitHub用户名&amp;qu">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-01-26T08:55:51.000Z">
-<meta property="article:modified_time" content="2023-10-05T11:11:13.481Z">
+<meta property="article:modified_time" content="2023-10-05T11:41:44.909Z">
 <meta property="article:author" content="dasein">
 <meta property="article:tag" content="HEXO">
 <meta property="article:tag" content="折腾">
@@ -133,7 +133,7 @@
       
         <time datetime="2020-01-26T08:55:51.000Z" itemprop="datePublished">2020-01-26</time>
         
-        (Updated: <time datetime="2023-10-05T11:11:13.481Z" itemprop="dateModified">2023-10-05</time>)
+        (Updated: <time datetime="2023-10-05T11:41:44.909Z" itemprop="dateModified">2023-10-05</time>)
         
       
     </div>
@@ -154,7 +154,7 @@
 
   <div class="content" itemprop="articleBody">
     <h2 id="HEXO安装"><a href="#HEXO安装" class="headerlink" title="HEXO安装"></a>HEXO安装</h2><p><strong>安装nodejs</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">安装nodejs：去https://nodejs.org/en/ 下载安装</span><br><span class="line">npm install -g hexo-cli 安装hexo  </span><br><span class="line">hexo init</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git  </span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">安装nodejs：去https://nodejs.org/en/ 下载安装</span><br><span class="line">npm install -g hexo-cli 安装hexo</span><br><span class="line">hexo init</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
 
 
 
@@ -166,9 +166,11 @@
 <h2 id="Git代理"><a href="#Git代理" class="headerlink" title="Git代理"></a>Git代理</h2><blockquote>
 <p>git config –global http.proxy socks5:&#x2F;&#x2F;127.0.0.1:7891<br>git config –global https.proxy socks5:&#x2F;&#x2F;127.0.0.1:7891</p>
 </blockquote>
-<h2 id="HEXO上传到github"><a href="#HEXO上传到github" class="headerlink" title="HEXO上传到github"></a>HEXO上传到github</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;...&quot;</span><br><span class="line">git push</span><br><span class="line"></span><br><span class="line">发布到GitHub：</span><br><span class="line">hexo g -d </span><br></pre></td></tr></table></figure>
+<h2 id="HEXO上传到github"><a href="#HEXO上传到github" class="headerlink" title="HEXO上传到github"></a>HEXO上传到github</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;...&quot;</span><br><span class="line">git push</span><br><span class="line"></span><br><span class="line">发布到GitHub：</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
 
 <h2 id="从GitHub恢复HEXO"><a href="#从GitHub恢复HEXO" class="headerlink" title="从GitHub恢复HEXO"></a>从GitHub恢复HEXO</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">从GitHub拉取:</span><br><span class="line">git clone git@github.com:GitHubname/GitHubname.github.io.git</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> GitHubname.github.io.git</span><br></pre></td></tr></table></figure>
 <p>Git bash依次执行下列指令：</p>
 <blockquote>
 <p>npm install hexo<br>npm install<br>npm install  hexo-deployer-git</p>
