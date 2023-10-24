@@ -9,7 +9,7 @@
     <meta name="description" content="默认安装oh-my-zsh的方式是： 1sh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;master&#x2F;tools&#x2F;install.sh)&quot;  但是GitHub访问太慢，而Gitee有oh-my-zsh的镜象。但是Gitee是直接吧GitHub的包克隆下来了，README.md文件一字未动，安装方">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从Gitee安装oh-my-zsh">
-<meta property="og:url" content="https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/index.html">
+<meta property="og:url" content="https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/index.html">
 <meta property="og:site_name" content="Dasein">
 <meta property="og:description" content="默认安装oh-my-zsh的方式是： 1sh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;master&#x2F;tools&#x2F;install.sh)&quot;  但是GitHub访问太慢，而Gitee有oh-my-zsh的镜象。但是Gitee是直接吧GitHub的包克隆下来了，README.md文件一字未动，安装方">
 <meta property="og:locale" content="zh_CN">
@@ -94,17 +94,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&text=从Gitee安装oh-my-zsh"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&title=从Gitee安装oh-my-zsh"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&is_video=false&description=从Gitee安装oh-my-zsh"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=从Gitee安装oh-my-zsh&body=Check out this article: https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&title=从Gitee安装oh-my-zsh"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&title=从Gitee安装oh-my-zsh"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&title=从Gitee安装oh-my-zsh"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&title=从Gitee安装oh-my-zsh"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&name=从Gitee安装oh-my-zsh&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&t=从Gitee安装oh-my-zsh"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&text=从Gitee安装oh-my-zsh"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&title=从Gitee安装oh-my-zsh"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&is_video=false&description=从Gitee安装oh-my-zsh"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=从Gitee安装oh-my-zsh&body=Check out this article: https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&title=从Gitee安装oh-my-zsh"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&title=从Gitee安装oh-my-zsh"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&title=从Gitee安装oh-my-zsh"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&title=从Gitee安装oh-my-zsh"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&name=从Gitee安装oh-my-zsh&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&t=从Gitee安装oh-my-zsh"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -220,17 +220,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&text=从Gitee安装oh-my-zsh"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&title=从Gitee安装oh-my-zsh"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&is_video=false&description=从Gitee安装oh-my-zsh"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=从Gitee安装oh-my-zsh&body=Check out this article: https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&title=从Gitee安装oh-my-zsh"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&title=从Gitee安装oh-my-zsh"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&title=从Gitee安装oh-my-zsh"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&title=从Gitee安装oh-my-zsh"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&name=从Gitee安装oh-my-zsh&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2021/11/01/%E4%BD%BF%E7%94%A8Gitee%E7%9A%84%E6%BA%90%E5%AE%89%E8%A3%85oh-my-zsh/&t=从Gitee安装oh-my-zsh"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&text=从Gitee安装oh-my-zsh"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&title=从Gitee安装oh-my-zsh"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&is_video=false&description=从Gitee安装oh-my-zsh"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=从Gitee安装oh-my-zsh&body=Check out this article: https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&title=从Gitee安装oh-my-zsh"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&title=从Gitee安装oh-my-zsh"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&title=从Gitee安装oh-my-zsh"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&title=从Gitee安装oh-my-zsh"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&name=从Gitee安装oh-my-zsh&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2021/11/01/install_oh-my-zsh_by_gitee/&t=从Gitee安装oh-my-zsh"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>

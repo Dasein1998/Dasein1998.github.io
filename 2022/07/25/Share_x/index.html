@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="之前买了永久SM.MS图床的会员，然后用的是picgo来上传图片。但每次需要用截图软件截图，然后打开picgo上传，就感觉不大方便。于是配置了Share X来截图和自动上传图片。Share X的官网：ShareX - The best free and open source screenshot tool for WindowsShare X自带的图片上传服务是没有SM.MS的：但是官方的Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Share X结合SM.MS图床">
-<meta property="og:url" content="https://dasein.site/2022/07/25/Share%20x/index.html">
+<meta property="og:title" content="Share X配合SM.MS图床实现自动上传图片">
+<meta property="og:url" content="https://dasein.site/2022/07/25/Share_x/index.html">
 <meta property="og:site_name" content="Dasein">
 <meta property="og:description" content="之前买了永久SM.MS图床的会员，然后用的是picgo来上传图片。但每次需要用截图软件截图，然后打开picgo上传，就感觉不大方便。于是配置了Share X来截图和自动上传图片。Share X的官网：ShareX - The best free and open source screenshot tool for WindowsShare X自带的图片上传服务是没有SM.MS的：但是官方的Git">
 <meta property="og:locale" content="zh_CN">
@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://vip2.loli.io/2022/07/26/9PzQuWyYepcgOj3.png">
 <meta property="og:image" content="https://vip2.loli.io/2022/07/26/yBtZfndj1gJkcIx.png">
 <meta property="article:published_time" content="2022-07-25T06:14:14.000Z">
-<meta property="article:modified_time" content="2023-10-05T11:11:13.483Z">
+<meta property="article:modified_time" content="2023-10-24T11:07:33.699Z">
 <meta property="article:author" content="dasein">
 <meta property="article:tag" content="云服务">
 <meta property="article:tag" content="折腾">
@@ -43,7 +43,7 @@
       
     
     <!-- title -->
-    <title>Share X结合SM.MS图床</title>
+    <title>Share X配合SM.MS图床实现自动上传图片</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/css/style.css">
@@ -83,7 +83,7 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2023/10/05/ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="/2023/10/05/ubuntu_server/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" href="/2022/07/24/win11%E9%99%8D%E7%BA%A7%E5%9B%9Ewin10/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -99,17 +99,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/2022/07/25/Share%20x/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2022/07/25/Share%20x/&text=Share X结合SM.MS图床"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2022/07/25/Share%20x/&title=Share X结合SM.MS图床"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2022/07/25/Share%20x/&is_video=false&description=Share X结合SM.MS图床"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Share X结合SM.MS图床&body=Check out this article: https://dasein.site/2022/07/25/Share%20x/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2022/07/25/Share%20x/&title=Share X结合SM.MS图床"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2022/07/25/Share%20x/&title=Share X结合SM.MS图床"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2022/07/25/Share%20x/&title=Share X结合SM.MS图床"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2022/07/25/Share%20x/&title=Share X结合SM.MS图床"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2022/07/25/Share%20x/&name=Share X结合SM.MS图床&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2022/07/25/Share%20x/&t=Share X结合SM.MS图床"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/2022/07/25/Share_x/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2022/07/25/Share_x/&text=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2022/07/25/Share_x/&title=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2022/07/25/Share_x/&is_video=false&description=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Share X配合SM.MS图床实现自动上传图片&body=Check out this article: https://dasein.site/2022/07/25/Share_x/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2022/07/25/Share_x/&title=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2022/07/25/Share_x/&title=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2022/07/25/Share_x/&title=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2022/07/25/Share_x/&title=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2022/07/25/Share_x/&name=Share X配合SM.MS图床实现自动上传图片&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2022/07/25/Share_x/&t=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -126,7 +126,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        Share X结合SM.MS图床
+        Share X配合SM.MS图床实现自动上传图片
     </h1>
 
 
@@ -140,7 +140,7 @@
       
         <time datetime="2022-07-25T06:14:14.000Z" itemprop="datePublished">2022-07-25</time>
         
-        (Updated: <time datetime="2023-10-05T11:11:13.483Z" itemprop="dateModified">2023-10-05</time>)
+        (Updated: <time datetime="2023-10-24T11:07:33.699Z" itemprop="dateModified">2023-10-24</time>)
         
       
     </div>
@@ -202,17 +202,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/2022/07/25/Share%20x/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2022/07/25/Share%20x/&text=Share X结合SM.MS图床"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2022/07/25/Share%20x/&title=Share X结合SM.MS图床"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2022/07/25/Share%20x/&is_video=false&description=Share X结合SM.MS图床"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Share X结合SM.MS图床&body=Check out this article: https://dasein.site/2022/07/25/Share%20x/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2022/07/25/Share%20x/&title=Share X结合SM.MS图床"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2022/07/25/Share%20x/&title=Share X结合SM.MS图床"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2022/07/25/Share%20x/&title=Share X结合SM.MS图床"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2022/07/25/Share%20x/&title=Share X结合SM.MS图床"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2022/07/25/Share%20x/&name=Share X结合SM.MS图床&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2022/07/25/Share%20x/&t=Share X结合SM.MS图床"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/2022/07/25/Share_x/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2022/07/25/Share_x/&text=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2022/07/25/Share_x/&title=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2022/07/25/Share_x/&is_video=false&description=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Share X配合SM.MS图床实现自动上传图片&body=Check out this article: https://dasein.site/2022/07/25/Share_x/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2022/07/25/Share_x/&title=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2022/07/25/Share_x/&title=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2022/07/25/Share_x/&title=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2022/07/25/Share_x/&title=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2022/07/25/Share_x/&name=Share X配合SM.MS图床实现自动上传图片&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2022/07/25/Share_x/&t=Share X配合SM.MS图床实现自动上传图片"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
