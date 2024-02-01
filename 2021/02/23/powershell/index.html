@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="因为写博客，以及闲的没事喜欢折腾，还是会经常用到Windows默认的shell： Powershell微软将Powershell开源后，不仅可以在Windows还可以在Linux，Mac os上使用powershell。本文使用的是Powershell7，在此记录一下进行的一些简单配置。 PowerShell的官方文档：https:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;powers">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PowerShell折腾记录">
+<meta property="og:title" content="PowerShell插件安装">
 <meta property="og:url" content="https://dasein.site/2021/02/23/powershell/index.html">
 <meta property="og:site_name" content="Dasein">
 <meta property="og:description" content="因为写博客，以及闲的没事喜欢折腾，还是会经常用到Windows默认的shell： Powershell微软将Powershell开源后，不仅可以在Windows还可以在Linux，Mac os上使用powershell。本文使用的是Powershell7，在此记录一下进行的一些简单配置。 PowerShell的官方文档：https:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;powers">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-23T15:23:23.000Z">
-<meta property="article:modified_time" content="2023-10-14T13:38:39.101Z">
+<meta property="article:modified_time" content="2024-02-01T12:27:17.560Z">
 <meta property="article:author" content="dasein">
 <meta property="article:tag" content="折腾">
 <meta property="article:tag" content="命令行">
@@ -38,7 +38,7 @@
       
     
     <!-- title -->
-    <title>PowerShell折腾记录</title>
+    <title>PowerShell插件安装</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/css/style.css">
@@ -95,16 +95,16 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/2021/02/23/powershell/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2021/02/23/powershell/&text=PowerShell折腾记录"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell折腾记录"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2021/02/23/powershell/&is_video=false&description=PowerShell折腾记录"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=PowerShell折腾记录&body=Check out this article: https://dasein.site/2021/02/23/powershell/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell折腾记录"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell折腾记录"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell折腾记录"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell折腾记录"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2021/02/23/powershell/&name=PowerShell折腾记录&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2021/02/23/powershell/&t=PowerShell折腾记录"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2021/02/23/powershell/&text=PowerShell插件安装"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell插件安装"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2021/02/23/powershell/&is_video=false&description=PowerShell插件安装"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PowerShell插件安装&body=Check out this article: https://dasein.site/2021/02/23/powershell/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell插件安装"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell插件安装"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell插件安装"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell插件安装"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2021/02/23/powershell/&name=PowerShell插件安装&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2021/02/23/powershell/&t=PowerShell插件安装"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -121,7 +121,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        PowerShell折腾记录
+        PowerShell插件安装
     </h1>
 
 
@@ -135,7 +135,7 @@
       
         <time datetime="2021-02-23T15:23:23.000Z" itemprop="datePublished">2021-02-23</time>
         
-        (Updated: <time datetime="2023-10-14T13:38:39.101Z" itemprop="dateModified">2023-10-14</time>)
+        (Updated: <time datetime="2024-02-01T12:27:17.560Z" itemprop="dateModified">2024-02-01</time>)
         
       
     </div>
@@ -296,16 +296,16 @@
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/2021/02/23/powershell/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2021/02/23/powershell/&text=PowerShell折腾记录"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell折腾记录"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2021/02/23/powershell/&is_video=false&description=PowerShell折腾记录"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=PowerShell折腾记录&body=Check out this article: https://dasein.site/2021/02/23/powershell/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell折腾记录"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell折腾记录"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell折腾记录"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell折腾记录"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2021/02/23/powershell/&name=PowerShell折腾记录&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2021/02/23/powershell/&t=PowerShell折腾记录"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/2021/02/23/powershell/&text=PowerShell插件安装"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell插件安装"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/2021/02/23/powershell/&is_video=false&description=PowerShell插件安装"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PowerShell插件安装&body=Check out this article: https://dasein.site/2021/02/23/powershell/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell插件安装"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell插件安装"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell插件安装"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/2021/02/23/powershell/&title=PowerShell插件安装"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/2021/02/23/powershell/&name=PowerShell插件安装&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/2021/02/23/powershell/&t=PowerShell插件安装"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -326,7 +326,7 @@
     Copyright &copy;
     
     
-    2016-2023
+    2016-2024
     dasein
   </div>
   <div class="footer-right">
