@@ -1,6 +1,6 @@
 ---
 
-title: 使用Obsdian的Emacs快捷键
+title: 利用Emacs快捷键使用Obsdian
 date: 20230801 19:45:12
 tags: 
 - 折腾 

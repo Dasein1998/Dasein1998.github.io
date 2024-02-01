@@ -8,8 +8,7 @@ tags:
 categories: 
 - 工具
 ---
-
-## [ZSH](https://www.zsh.org)
+## [zsh](https://www.zsh.org)
 
 zsh相比bash来说，功能更加强大。通过安装插件可以获得更便利的使用体验。
 

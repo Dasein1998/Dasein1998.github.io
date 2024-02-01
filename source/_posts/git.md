@@ -7,10 +7,7 @@ tags:
 categories: 
 - 工具
 ---
-
-
-
-每次换系统就得重新安装和配置一遍Git，这次就记录一下配置的步骤。
+每次换系统就需要重新安装、配置Git，于是记录一下配置的步骤。
 
 GitHub官方文档：[中文版](https://docs.github.com/cn/github/getting-started-with-github/using-git)
 
@@ -20,9 +17,7 @@ SSH文档：[阮一峰的SSH教程](http://wangdoc.com/ssh)
 
    1. Windows和Mac直接下载安装包就行了。
 
-   2. Arch的话 直接`sudo pacman -S git`
-
-      
+   2. Arch的话 直接`sudo pacman -S git`  
 
 2. 然后配置用户名和邮箱：
 
@@ -45,7 +40,7 @@ SSH文档：[阮一峰的SSH教程](http://wangdoc.com/ssh)
  
    ```
    有需要加代理的，可以加入
-   ```
+   ```bash
    [https]
    	proxy = socks5://127.0.0.1:7890
    [http]

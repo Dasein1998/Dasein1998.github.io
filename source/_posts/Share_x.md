@@ -1,15 +1,13 @@
 ---
-
-title: Share X结合SM.MS图床
+title: Share X配合SM.MS图床实现自动上传图片
 date: 2022-07-25 14:14:14
-tags: 
-- 折腾
-- 自动化
-- 云服务
-categories: 
-- 工具
+tags:
+  - 折腾
+  - 自动化
+  - 云服务
+categories:
+  - 工具
 ---
-
 之前买了永久SM.MS图床的会员，然后用的是picgo来上传图片。但每次需要用截图软件截图，然后打开picgo上传，就感觉不大方便。于是配置了Share X来截图和自动上传图片。
 Share X的官网：[ShareX - The best free and open source screenshot tool for Windows](https://getsharex.com/)
 Share X自带的图片上传服务是没有SM.MS的：![](https://vip2.loli.io/2022/07/26/zuAUVDYG6vdOpJI.png)

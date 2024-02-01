@@ -1,8 +1,8 @@
 ---
 title: 配置HEXO
 date: 2020-01-26 16:55:51
-tags: 
-- 折腾 
+tags:
+- 折腾
 - HEXO
 ---
 
@@ -12,10 +12,10 @@ tags:
 
 ```
 安装nodejs：去https://nodejs.org/en/ 下载安装
-npm install -g hexo-cli 安装hexo  
+npm install -g hexo-cli 安装hexo
 hexo init
 npm install
-npm install hexo-deployer-git  
+npm install hexo-deployer-git
 ```
 
 
@@ -47,7 +47,7 @@ git commit -m "..."
 git push
 
 发布到GitHub：
-hexo g -d 
+hexo g -d
 ```
 
 ## 从GitHub恢复HEXO
@@ -57,8 +57,11 @@ hexo g -d
 从GitHub拉取:
 git clone git@github.com:GitHubname/GitHubname.github.io.git
 ```
+
+```bash
+cd GitHubname.github.io.git
+```
 Git bash依次执行下列指令：
 >npm install hexo
 >npm install
 >npm install  hexo-deployer-git
-

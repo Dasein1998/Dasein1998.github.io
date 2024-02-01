@@ -2,10 +2,10 @@
 
 title: AutoHotKey脚本的个人使用
 date: 2021-10-29 14:14:14
-tags: 
+tags:
 - 快捷键
 - 自动化
-categories: 
+categories:
 - 工具
 
 ---
@@ -13,7 +13,6 @@ categories:
 
 最近觉得使用Windows的时候有些自动化的东西可以通过自动化或者是脚本来提高效率，于是去写了点简单的AutoHotKey脚本，其官方网站是：https://www.autohotkey.com
 我的需求主要有几个方面：
-
 1. 快捷键
 2. 自动化
 ## 快捷键
@@ -39,6 +38,3 @@ Run, xxxx.exe
 Run, www.xxxx.com
 ```
 这样运行脚本就可以一口气打开很多个网页和软件。省的自己一个一个去点击了。
-
-
-

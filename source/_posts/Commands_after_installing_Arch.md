@@ -8,8 +8,7 @@ categories:
 - 工具
 ---
 
-本文主要记录一下自己安装Arch以及其衍生版本所需要完成的操作，以防每次都去谷歌。
-
+本文主要记录安装Arch以及其衍生版本所需要完成的操作，以防每次需要谷歌。
 ### 安装Keyring
 
 ```bash
@@ -65,9 +64,7 @@ cd yay
 makepkg -si
 ```
 
-以后就可以通过yay 来进行软件下载和系统更新了（注意：yay 不能在root状态下使用）
-
-
+然后可以通过yay 来进行软件下载和系统更新（注意：yay 不能在root状态下使用）
 
 ### 安装zsh
 
@@ -83,7 +80,7 @@ sudo pacman -S fcitx-im
 sudo pacman -S fcitx-cofigtool 	fcitx-rime
 ```
 
-然后
+然后开机启动fcitx
 
 ```
 sudo vim .xpofile  然后在里面添加：
@@ -93,4 +90,3 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 ```
-

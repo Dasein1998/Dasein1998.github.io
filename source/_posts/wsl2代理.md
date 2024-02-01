@@ -55,7 +55,6 @@ arch config --default-user root
 ```
 
 ---
-
 ### 安装ohmyzsh
 
 ```curl
@@ -69,7 +68,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ```bash
 uninstall_oh_my_zsh
 ```
-
 
 
 ---
@@ -119,6 +117,7 @@ wsl -t Arch
 ```
 
 以下皆用Arch代表<DistributionName>
+
 
 ```
 wsl --export Arch D:\arch.tar

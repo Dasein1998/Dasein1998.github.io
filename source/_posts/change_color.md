@@ -1,6 +1,6 @@
 ---
 
-title: 修改个人网站配色 
+title: 修改博客的配色 
 date: 2021-11-12 13:13:13
 tags: 
 - 折腾
@@ -34,6 +34,6 @@ $highlight = hexo-config("highlight") || "github"
 $font-size = 15px
 ```
 
-# ref
+# Ref
 [@font-face — Stylus 中文文档 | Stylus 中文网](https://www.stylus-lang.cn/docs/font-face.html)
 

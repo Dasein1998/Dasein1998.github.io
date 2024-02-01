@@ -9,8 +9,6 @@ categories:
 - 工具 
 
 ---
-
-[TOC]
 因为写博客，以及闲的没事喜欢折腾，还是会经常用到Windows默认的shell： [Powershell](https://github.com/PowerShell/PowerShell)
 微软将Powershell开源后，不仅可以在Windows还可以在Linux，Mac os上使用powershell。本文使用的是Powershell7，在此记录一下进行的一些简单配置。
 
