@@ -14,7 +14,7 @@ tags:
 	1. 可选桌面：i3wm，KDE，Deepin，Sway
 	2. 安装方式：WSL  or 双系统
 	3. 备选：Manjaro
-2. **Emacs+[Spacemacs](https://github.com/syl20bnr/spacemacs) ：** _**同上**_ （但是从来没用过）
+2. **Emacs ：**  **同上** 
 2. [**Vscode**](http://code.visualstudio.com)**+ Vim ：**_**为了vim的快捷键**_
 2. [**Vivaldi**](https://vivaldi.com/zh-hans/) ：***浏览器***
 	1. Vimium C：Vim快捷键方式浏览网页
@@ -43,4 +43,4 @@ tags:
 18. **[Mathpix](https://mathpix.com)**：**数学公式OCR软件，方便在LaTex和Word中展示公式** 
 19. **[Everything](https://www.7-zip.org)** ：**极其快速的文件索引工具**，我配合[WOX](http://www.wox.one)使用。
 20. **[Scoop](https://scoop.sh)** ：Windows平台的开源包管理软件，可以方便的下载安装一些库和软件。
-21. **Listary** ：也是一个经典的启动器，其相比everything，最大的特点是拓展了文件浏览器的使用。在软件打开文件的时候，可以直接索引系统文件，也可以直接Crtl+g 跳转到当前文件管理器打开的位置。
+21. **Listary** ：一个经典的windows软件启动器，相比everything只专注搜索，listary拓展了文件浏览器的使用。在使用其他软件打开文件时，可以直接Crtl+g 跳转到当前文件管理器打开的位置，或搜索的位置。

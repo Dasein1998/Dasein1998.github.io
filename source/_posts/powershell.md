@@ -1,6 +1,6 @@
 ---
 
-title: PowerShell折腾记录
+title: PowerShell插件安装
 date: 2021-02-23 23:23:23
 tags: 
 - 折腾
