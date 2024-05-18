@@ -3,7 +3,7 @@ title: 从Gitee安装oh-my-zsh
 date: 2021-11-01 14:14:14
 tags: 
 - 折腾
-- 软件
+
 categories: 
 - 工具
 ---

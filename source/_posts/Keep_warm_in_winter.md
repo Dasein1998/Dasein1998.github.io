@@ -2,7 +2,6 @@
 title: 在南方的冬天保暖
 date: 2023-11-11 18:18:18
 tags:
-  - 生活
 categories:
   - 随笔
 ---
