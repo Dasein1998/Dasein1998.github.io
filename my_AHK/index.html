@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="最近觉得使用Windows的时候有些自动化的东西可以通过自动化或者是脚本来提高效率，于是去写了点简单的AutoHotKey脚本，其官方网站是：https:&#x2F;&#x2F;www.autohotkey.com我的需求主要有几个方面：  快捷键 自动化快捷键Windows的快捷键有时候是蛮不规整，按起来也不方便。比如关闭软件的快捷键是Alt+F4。在笔记本上，按F4需要按Fn+F4两个键。再和Alt一起按，小拇指">
+    <meta name="description" content="最近觉得使用Windows的时候有些自动化的东西可以通过自动化或者是脚本来提高效率，于是去写了点简单的AutoHotKey脚本，其官方网站是：https:&#x2F;&#x2F;www.autohotkey.com我的需求主要有几个方面：  快捷键 自动化  快捷键Windows的快捷键有时候是蛮不规整，按起来也不方便。比如关闭软件的快捷键是Alt+F4。在笔记本上，按F4需要按Fn+F4两个键。再和Alt一起按，小">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AutoHotKey脚本的个人使用">
 <meta property="og:url" content="https://dasein.site/my_AHK/index.html">
 <meta property="og:site_name" content="Dasein">
-<meta property="og:description" content="最近觉得使用Windows的时候有些自动化的东西可以通过自动化或者是脚本来提高效率，于是去写了点简单的AutoHotKey脚本，其官方网站是：https:&#x2F;&#x2F;www.autohotkey.com我的需求主要有几个方面：  快捷键 自动化快捷键Windows的快捷键有时候是蛮不规整，按起来也不方便。比如关闭软件的快捷键是Alt+F4。在笔记本上，按F4需要按Fn+F4两个键。再和Alt一起按，小拇指">
+<meta property="og:description" content="最近觉得使用Windows的时候有些自动化的东西可以通过自动化或者是脚本来提高效率，于是去写了点简单的AutoHotKey脚本，其官方网站是：https:&#x2F;&#x2F;www.autohotkey.com我的需求主要有几个方面：  快捷键 自动化  快捷键Windows的快捷键有时候是蛮不规整，按起来也不方便。比如关闭软件的快捷键是Alt+F4。在笔记本上，按F4需要按Fn+F4两个键。再和Alt一起按，小">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-10-29T06:14:14.000Z">
-<meta property="article:modified_time" content="2024-08-18T23:43:37.518Z">
+<meta property="article:modified_time" content="2024-11-03T00:08:37.951Z">
 <meta property="article:author" content="dasein">
 <meta property="article:tag" content="自动化">
 <meta name="twitter:card" content="summary">
@@ -134,7 +134,7 @@
       
         <time datetime="2021-10-29T06:14:14.000Z" itemprop="datePublished">2021-10-29</time>
         
-        (Updated: <time datetime="2024-08-18T23:43:37.518Z" itemprop="dateModified">2024-08-19</time>)
+        (Updated: <time datetime="2024-11-03T00:08:37.951Z" itemprop="dateModified">2024-11-03</time>)
         
       
     </div>
@@ -162,13 +162,19 @@
     <p>最近觉得使用Windows的时候有些自动化的东西可以通过自动化或者是脚本来提高效率，于是去写了点简单的AutoHotKey脚本，其官方网站是：<a target="_blank" rel="noopener" href="https://www.autohotkey.com/">https://www.autohotkey.com</a><br>我的需求主要有几个方面：</p>
 <ol>
 <li>快捷键</li>
-<li>自动化<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2>Windows的快捷键有时候是蛮不规整，按起来也不方便。<br>比如关闭软件的快捷键是Alt+F4。<br>在笔记本上，按F4需要按Fn+F4两个键。再和Alt一起按，小拇指就十分的别扭。<br>之前用习惯i3wm的快捷键，于是把用AHK脚本把i3wm的快捷键：$mod+Shift+Q映射为了Alt+F4.<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#+q::Send !&#123;F4&#125;</span><br></pre></td></tr></table></figure>
-#表示Win，+表示Shift，q为q。<br>！表示Alt，{F4}表示为F4<br>以及i3wm还有一个$mod+Enter打开终端的快捷键，AHK脚本中可写为<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#Enter::Run, PowerShell -Command &quot;wt -p Arch&quot;</span><br></pre></td></tr></table></figure>
-<code>wt -p Arch</code>表示打开Arch的WSL子系统。wt的其他方法可见<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/terminal/command-line-arguments?tabs=windows">官方文档</a></li>
+<li>自动化</li>
 </ol>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>Windows的快捷键有时候是蛮不规整，按起来也不方便。<br>比如关闭软件的快捷键是Alt+F4。<br>在笔记本上，按F4需要按Fn+F4两个键。再和Alt一起按，小拇指就十分的别扭。<br>之前用习惯i3wm的快捷键，于是把用AHK脚本把i3wm的快捷键：$mod+Shift+Q映射为了Alt+F4.</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">#+q::</span>Send !&#123;F4&#125;</span><br></pre></td></tr></table></figure>
+
+<p>#表示Win，+表示Shift，q为q。<br>！表示Alt，{F4}表示为F4<br>以及i3wm还有一个$mod+Enter打开终端的快捷键，AHK脚本中可写为</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">#Enter::</span>Run, PowerShell -Command <span class="string">&quot;wt -p Arch&quot;</span></span><br></pre></td></tr></table></figure>
+<p><code>wt -p Arch</code>表示打开Arch的WSL子系统。wt的其他方法可见<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/terminal/command-line-arguments?tabs=windows">官方文档</a></p>
 <h2 id="自动化"><a href="#自动化" class="headerlink" title="自动化"></a>自动化</h2><p>我需求很简单，就是懒得一个一个打开链接和应用，所以直接</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Run, xxxx.exe</span><br><span class="line">Run, www.xxxx.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Run,</span> xxxx.exe</span><br><span class="line"><span class="built_in">Run,</span> www.xxxx.com</span><br></pre></td></tr></table></figure>
+
 <p>这样运行脚本就可以一口气打开很多个网页和软件。省的自己一个一个去点击了。</p>
+<p>有人给AHK做了一个从V1 转成V2的转化器，方便用户把脚本从AHK V1转成AHK V2。<br><a target="_blank" rel="noopener" href="https://github.com/mmikeww/AHK-v2-script-converter">AHK转换器</a></p>
 
   </div>
 </article>
