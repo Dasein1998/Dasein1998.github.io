@@ -35,18 +35,20 @@ Win10虽然系统能在 Administrative language settings 里勾选 Beta: Use Uni
 这样就可以通过`consult-locate`命令在Windows上搜索本地文件了。
 （前提是安装好了everything-cli，用scoop安装： scoop install everything-cli ,或去everything官网下载es.exe并添加到系统变量）
 
-## Org-mode中，通过Powershell读取系统剪贴板并插入图片到特定文件夹
+## Org-mode中，通过Powershell读取系统剪贴板并插入图片到特定文件夹中
 
 ```lisp
 ;;;从windows剪贴板插入图片
-(defun org-insert-image-from-clipboard ()
+(defun my/org-insert-image-from-clipboard ()
   "Insert an image from the clipboard into the current org buffer."
   (interactive)
   (let* ((current-dir (file-name-directory buffer-file-name))
-	    (file-name-base (file-name-base buffer-file-name))
-	 ;;(attach-dir (concat current-dir "assets/" file-name-base "/"));;为每个文件都创一个同名文件夹，并放在assets子目录下
-	 (attach-dir (concat "assets/" file-name-base "/"));;直接放在同级assets目录下
-	 (image-file (concat attach-dir (format-time-string "%Y%m%dT%H%M%S") ".png")));;时间戳当文件名，格式为png
+	  (file-name-base (file-name-base buffer-file-name))
+	 ;;(attach-dir (concat current-dir "assets/" file-name-base "/"))
+	 (attach-dir "assets/")
+   (attach-dir-pic "./assets/")
+	 (image-file (concat attach-dir (format-time-string "%Y%m%d%H%M%S") ".png"))
+   (image-file-pic (concat attach-dir-pic (format-time-string "%Y%m%d%H%M%S") ".png")));;相对路径
     ;; Ensure attach directory exists
     (unless (file-exists-p attach-dir)
       (make-directory attach-dir t))
@@ -56,7 +58,7 @@ Win10虽然系统能在 Administrative language settings 里勾选 Beta: Use Uni
       (error "Unsupported OS")
       )
     ;; Insert the link to the image in the org file
-    (insert (concat "[[file:" image-file "]]"))
+    (insert (concat "[[file:" image-file-pic "]]"));;相对路径
     ;;(org-display-inline-images)
     )
   )
