@@ -44,3 +44,9 @@ my: App_in_my_pc
 19. **[Everything](https://www.7-zip.org)** ：**极其快速的文件索引工具**，我配合[WOX](http://www.wox.one)使用。
 20. **[Scoop](https://scoop.sh)** ：Windows平台的开源包管理软件，可以方便的下载安装一些库和软件。
 21. **Listary** ：一个经典的windows软件启动器，相比everything只专注搜索，listary拓展了文件浏览器的使用。在使用其他软件打开文件时，可以直接Crtl+g 跳转到当前文件管理器打开的位置，或搜索的位置。
+
+
+---
+1. 安装Clash
+2. 安装Scoop 
+按下 Win + R，输入 shell:startup，回车可打开Windows启动目录。
