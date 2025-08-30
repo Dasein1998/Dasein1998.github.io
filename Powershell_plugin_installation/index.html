@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="因为写博客，以及闲的没事喜欢折腾，还是会经常用到Windows默认的shell： Powershell微软将Powershell开源后，不仅可以在Windows还可以在Linux，Mac os上使用powershell。本文使用的是Powershell7，在此记录一下进行的一些简单配置。 PowerShell的官方文档：https:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;powers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PowerShell插件安装">
+<meta property="og:url" content="https://dasein.site/Powershell_plugin_installation/index.html">
+<meta property="og:site_name" content="Dasein">
+<meta property="og:description" content="因为写博客，以及闲的没事喜欢折腾，还是会经常用到Windows默认的shell： Powershell微软将Powershell开源后，不仅可以在Windows还可以在Linux，Mac os上使用powershell。本文使用的是Powershell7，在此记录一下进行的一些简单配置。 PowerShell的官方文档：https:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;powers">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-23T15:23:23.000Z">
+<meta property="article:modified_time" content="2025-08-30T06:33:06.198Z">
+<meta property="article:author" content="dasein">
+<meta property="article:tag" content="折腾">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>PowerShell插件安装</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Dasein" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/Install_todo.txt-cli/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/Introduction_of_seeking_friends_online/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/Powershell_plugin_installation/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/Powershell_plugin_installation/&text=PowerShell插件安装"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/Powershell_plugin_installation/&title=PowerShell插件安装"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/Powershell_plugin_installation/&is_video=false&description=PowerShell插件安装"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PowerShell插件安装&body=Check out this article: https://dasein.site/Powershell_plugin_installation/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/Powershell_plugin_installation/&title=PowerShell插件安装"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/Powershell_plugin_installation/&title=PowerShell插件安装"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/Powershell_plugin_installation/&title=PowerShell插件安装"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/Powershell_plugin_installation/&title=PowerShell插件安装"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/Powershell_plugin_installation/&name=PowerShell插件安装&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/Powershell_plugin_installation/&t=PowerShell插件安装"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Nuget%E5%92%8CPowerShellGet"><span class="toc-number">1.</span> <span class="toc-text">安装Nuget和PowerShellGet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85oh-my-posh%E5%92%8Cposh-git"><span class="toc-number">2.</span> <span class="toc-text">安装oh-my-posh和posh-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">自己的一些配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E8%AE%BF%E9%97%AE"><span class="toc-number">3.1.</span> <span class="toc-text">快捷访问</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#z-lua"><span class="toc-number">3.2.</span> <span class="toc-text">z.lua</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%EF%BC%9A"><span class="toc-number">3.2.1.</span> <span class="toc-text">配置：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%90%86"><span class="toc-number">3.3.</span> <span class="toc-text">代理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E9%87%8D%E8%A3%85%E5%90%8E%E6%81%A2%E5%A4%8Dscoop"><span class="toc-number"></span> <span class="toc-text">安装和重装后恢复scoop</span></a>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        PowerShell插件安装
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">dasein</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-02-23T15:23:23.000Z" itemprop="datePublished">2021-02-23</time>
+        
+        (Updated: <time datetime="2025-08-30T06:33:06.198Z" itemprop="dateModified">2025-08-30</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E6%8A%98%E8%85%BE/" rel="tag">折腾</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>因为写博客，以及闲的没事喜欢折腾，还是会经常用到Windows默认的shell： <a target="_blank" rel="noopener" href="https://github.com/PowerShell/PowerShell">Powershell</a><br>微软将Powershell开源后，不仅可以在Windows还可以在Linux，Mac os上使用powershell。本文使用的是Powershell7，在此记录一下进行的一些简单配置。</p>
+<p>PowerShell的官方文档：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/powershell/">https://docs.microsoft.com/en-us/powershell/</a></p>
+<h3 id="安装Nuget和PowerShellGet"><a href="#安装Nuget和PowerShellGet" class="headerlink" title="安装Nuget和PowerShellGet"></a>安装Nuget和PowerShellGet</h3><p>安装powershell官方的插件管理</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Install-PackageProvider</span> <span class="literal">-Name</span> NuGet <span class="literal">-Force</span></span><br><span class="line"><span class="built_in">Install-Module</span> <span class="literal">-Name</span> PowerShellGet <span class="literal">-Force</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="安装oh-my-posh和posh-git"><a href="#安装oh-my-posh和posh-git" class="headerlink" title="安装oh-my-posh和posh-git"></a>安装<a target="_blank" rel="noopener" href="https://ohmyposh.dev/">oh-my-posh</a>和<a target="_blank" rel="noopener" href="https://github.com/dahlbyk/posh-git">posh-git</a></h3><p>posh-git是优化PowerShell中使用git的插件，常常配合oh-my-posh使用。可以很方便查看git的当前分支和其他信息。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> <span class="built_in">oh</span><span class="literal">-my-posh</span> <span class="literal">-Scope</span> CurrentUser <span class="literal">-AllowPrerelease</span></span><br><span class="line"><span class="built_in">Install-Module</span> posh<span class="literal">-git</span> <span class="literal">-Scope</span> CurrentUser <span class="literal">-AllowPrerelease</span> <span class="literal">-Force</span></span><br><span class="line"><span class="built_in">Get-PoshThemes</span>   查看所有<span class="built_in">oh</span><span class="literal">-my-posh</span>主题</span><br><span class="line"><span class="built_in">Set-PoshPrompt</span> <span class="literal">-Theme</span> lambda</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在powershell中输入 $PROFILE 则可查看其配置文件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>配置文件中添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Import-Module posh-git</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line">Set-PoshPrompt -Theme Lambda</span><br></pre></td></tr></table></figure>
+
+<h3 id="自己的一些配置"><a href="#自己的一些配置" class="headerlink" title="自己的一些配置"></a>自己的一些配置</h3><h4 id="快捷访问"><a href="#快捷访问" class="headerlink" title="快捷访问"></a>快捷访问</h4><p>PowerShell没有alias，但是可以使用function函数来完成：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">blog</span></span> &#123;<span class="built_in">cd</span> D:\blog&#125;       字面意思：敲入blog 则对应命令 <span class="built_in">cd</span> D:\blog</span><br></pre></td></tr></table></figure>
+
+<h4 id="z-lua"><a href="#z-lua" class="headerlink" title="z.lua"></a><a target="_blank" rel="noopener" href="https://github.com/skywind3000/z.lua">z.lua</a></h4><blockquote>
+<p>z.lua 是一个快速路径切换工具，它会跟踪你在 shell 下访问过的路径，通过一套称为 Frecent 的机制（源自 FireFox），经过一段简短的学习之后，z.lua 会帮你跳转到所有匹配正则关键字的路径里 Frecent 值最高的那条路径去。  </p>
+</blockquote>
+<p>还是为了偷懒，因为我经常<code>cd D:\blog</code> ，现在只需要<code> z b</code> 就行了。</p>
+<h5 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h5><ol>
+<li>安装lua<ol>
+<li>下载编译好的适用于win10的<a target="_blank" rel="noopener" href="http://joedf.ahkscript.org/LuaBuilds/">lua库</a></li>
+<li>解压到你喜欢的地方</li>
+<li>复制目录，添加到系统变量</li>
+</ol>
+</li>
+<li>安装<a target="_blank" rel="noopener" href="https://github.com/skywind3000/z.lua">z.lua</a><ol>
+<li>去release下载<a target="_blank" rel="noopener" href="https://github.com/skywind3000/z.lua">z.lua</a> </li>
+<li>解压到你喜欢的地方</li>
+<li>复制文件位置</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Invoke-Expression</span> (&amp; &#123; (lua /path/to/z.lua <span class="literal">--init</span> powershell) <span class="operator">-join</span> <span class="string">&quot;`n&quot;</span> &#125;)</span><br><span class="line">/path/to/z.lua   就是z.lua解压的目录</span><br></pre></td></tr></table></figure>
+
+<p>记录一下：</p>
+<ul>
+<li>zsh中使用，需要在.zshrc中添加</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &quot;$(lua /path/to/z.lua --init zsh)&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Fish Shell中使用，创建文件</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.config/fish/conf.d/z.fish</span><br></pre></td></tr></table></figure>
+
+<p>内容为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source (lua /path/to/z.lua --init fish | psub)</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lua /path/to/z.lua --init fish &gt; ~/.config/fish/conf.d/z.fish</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Bash中使用，在.bashrc中添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &quot;$(lua /path/to/z.lua --init bash)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>为了使用增强模式则：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &quot;$(lua /path/to/z.lua --init bash enhanced once)&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h4><p>恩，从网上抄了一个代理的脚本，将其复制到<code>$PROFILE</code>中。</p>
+<p><code>Env-Proxy</code>设置系统代理</p>
+<p><code>Git-Proxy</code>设置git代理</p>
+<p><code>Scoop-Proxy</code>设置scoop代理等 具体阅读脚本。（我也看不懂 但是能用）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$defalut_proxy</span> = <span class="string">&#x27;http://127.0.0.1:7890&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ([<span class="type">System.Environment</span>]::GetEnvironmentVariable(<span class="string">&#x27;DEFAULT_PROXY&#x27;</span>) <span class="operator">-ne</span> <span class="variable">$null</span>) &#123;</span><br><span class="line">    <span class="variable">$defalut_proxy</span> = [<span class="type">System.Environment</span>]::GetEnvironmentVariable(<span class="string">&#x27;DEFAULT_PROXY&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Env-Proxy</span><span class="params">(<span class="variable">$operate</span>, <span class="variable">$proxy</span> = <span class="variable">$defalut_proxy</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;get&quot;</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$env:HTTP_PROXY</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">elseif</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;set&quot;</span>) &#123;</span><br><span class="line">        <span class="variable">$env:HTTP_PROXY</span> = <span class="variable">$proxy</span>;</span><br><span class="line">        <span class="variable">$env:HTTPS_PROXY</span> = <span class="variable">$proxy</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Success&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">elseif</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;del&quot;</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$env:HTTP_PROXY</span> <span class="operator">-ne</span> <span class="variable">$null</span>) &#123;</span><br><span class="line">            <span class="built_in">Remove-Item</span> env:HTTP_PROXY</span><br><span class="line">            <span class="built_in">Remove-Item</span> env:HTTPS_PROXY</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Success&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Git-Proxy</span><span class="params">(<span class="variable">$operate</span>, <span class="variable">$proxy</span> = <span class="variable">$defalut_proxy</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;get&quot;</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> (git config <span class="literal">--global</span> <span class="literal">--get</span> http.proxy);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">elseif</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;set&quot;</span>) &#123;</span><br><span class="line">        git config <span class="literal">--global</span> http.proxy <span class="variable">$proxy</span>;</span><br><span class="line">        git config <span class="literal">--global</span> https.proxy <span class="variable">$proxy</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Success&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">elseif</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;del&quot;</span>) &#123;</span><br><span class="line">        git config <span class="literal">--global</span> <span class="literal">--unset</span> http.proxy</span><br><span class="line">        git config <span class="literal">--global</span> <span class="literal">--unset</span> https.proxy</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Success&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Node-Proxy</span><span class="params">(<span class="variable">$operate</span>, <span class="variable">$proxy</span> = <span class="variable">$defalut_proxy</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;get&quot;</span>) &#123;</span><br><span class="line">        <span class="variable">$yarn_proxy</span> = (yarn config get proxy);</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$yarn_proxy</span> <span class="operator">-eq</span> <span class="string">&quot;undefined&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="variable">$null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="variable">$yarn_proxy</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">elseif</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;set&quot;</span>) &#123;</span><br><span class="line">        npm config <span class="built_in">set</span> proxy <span class="variable">$proxy</span> | <span class="built_in">Out-Null</span>;</span><br><span class="line">        npm config <span class="built_in">set</span> https<span class="literal">-proxy</span> <span class="variable">$proxy</span> | <span class="built_in">Out-Null</span>;</span><br><span class="line">        yarn config <span class="built_in">set</span> proxy <span class="variable">$proxy</span> | <span class="built_in">Out-Null</span>;</span><br><span class="line">        yarn config <span class="built_in">set</span> https<span class="literal">-proxy</span> <span class="variable">$proxy</span> | <span class="built_in">Out-Null</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Success&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">elseif</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;del&quot;</span>) &#123;</span><br><span class="line">        npm config delete proxy | <span class="built_in">Out-Null</span></span><br><span class="line">        npm config delete https<span class="literal">-proxy</span> | <span class="built_in">Out-Null</span></span><br><span class="line">        yarn config delete proxy | <span class="built_in">Out-Null</span></span><br><span class="line">        yarn config delete https<span class="literal">-proxy</span> | <span class="built_in">Out-Null</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Success&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Composer-Proxy</span><span class="params">(<span class="variable">$operate</span>, <span class="variable">$proxy</span> = <span class="variable">$defalut_proxy</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (Env<span class="literal">-Proxy</span> <span class="variable">$operate</span> <span class="variable">$proxy</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Scoop-Proxy</span><span class="params">(<span class="variable">$operate</span>, <span class="variable">$proxy</span> = <span class="variable">$defalut_proxy</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;get&quot;</span>) &#123;</span><br><span class="line">        <span class="variable">$scoop_proxy</span> = (scoop config proxy);</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$scoop_proxy</span> <span class="operator">-eq</span> <span class="string">&quot;&#x27;proxy&#x27; is not set&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="variable">$null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="variable">$scoop_proxy</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">elseif</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;set&quot;</span>) &#123;</span><br><span class="line">        scoop config proxy <span class="variable">$proxy</span>.Substring(<span class="number">7</span>) | <span class="built_in">Out-Null</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Success&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">elseif</span> (<span class="variable">$operate</span> <span class="operator">-eq</span> <span class="string">&quot;del&quot;</span>) &#123;</span><br><span class="line">        scoop config <span class="built_in">rm</span> proxy | <span class="built_in">Out-Null</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Success&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 脚本部分</span></span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$args</span>[<span class="number">0</span>] <span class="operator">-in</span> <span class="string">&quot;set&quot;</span>, <span class="string">&quot;get&quot;</span>, <span class="string">&quot;del&quot;</span>) &#123;</span><br><span class="line">    <span class="variable">$used_proxy</span> = <span class="variable">$defalut_proxy</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$args</span>[<span class="number">2</span>] <span class="operator">-ne</span> <span class="variable">$null</span>) &#123;</span><br><span class="line">        <span class="variable">$used_proxy</span> = <span class="variable">$args</span>[<span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$args</span>[<span class="number">1</span>] <span class="operator">-eq</span> <span class="string">&quot;env&quot;</span>) &#123;</span><br><span class="line">        <span class="built_in">Write-Output</span> (Env<span class="literal">-Proxy</span> <span class="variable">$args</span>[<span class="number">0</span>] <span class="variable">$used_proxy</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$args</span>[<span class="number">1</span>] <span class="operator">-eq</span> <span class="string">&quot;git&quot;</span>) &#123;</span><br><span class="line">        <span class="built_in">Write-Output</span> (Git<span class="literal">-Proxy</span> <span class="variable">$args</span>[<span class="number">0</span>] <span class="variable">$used_proxy</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$args</span>[<span class="number">1</span>] <span class="operator">-in</span> <span class="string">&quot;npm&quot;</span>, <span class="string">&quot;node&quot;</span>, <span class="string">&quot;yarn&quot;</span>) &#123;</span><br><span class="line">        <span class="built_in">Write-Output</span> (Node<span class="literal">-Proxy</span> <span class="variable">$args</span>[<span class="number">0</span>] <span class="variable">$used_proxy</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$args</span>[<span class="number">1</span>] <span class="operator">-eq</span> <span class="string">&quot;composer&quot;</span>) &#123;</span><br><span class="line">        <span class="built_in">Write-Output</span> (Composer<span class="literal">-Proxy</span> <span class="variable">$args</span>[<span class="number">0</span>] <span class="variable">$used_proxy</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$args</span>[<span class="number">1</span>] <span class="operator">-eq</span> <span class="string">&quot;all&quot;</span> <span class="operator">-or</span> <span class="variable">$args</span>[<span class="number">1</span>] <span class="operator">-eq</span> <span class="variable">$null</span>) &#123;</span><br><span class="line">        <span class="built_in">Write-Output</span> (<span class="string">&quot;Env: &quot;</span> + (Env<span class="literal">-Proxy</span> <span class="variable">$args</span>[<span class="number">0</span>] <span class="variable">$used_proxy</span>));</span><br><span class="line">        <span class="built_in">Write-Output</span> (<span class="string">&quot;Git: &quot;</span> + (Git<span class="literal">-Proxy</span> <span class="variable">$args</span>[<span class="number">0</span>] <span class="variable">$used_proxy</span>));</span><br><span class="line">        <span class="built_in">Write-Output</span> (<span class="string">&quot;Node: &quot;</span> + (Node<span class="literal">-Proxy</span> <span class="variable">$args</span>[<span class="number">0</span>] <span class="variable">$used_proxy</span>));</span><br><span class="line">        <span class="built_in">Write-Output</span> (<span class="string">&quot;Composer: &quot;</span> + (Composer<span class="literal">-Proxy</span> <span class="variable">$args</span>[<span class="number">0</span>] <span class="variable">$used_proxy</span>));</span><br><span class="line">        <span class="built_in">Write-Output</span> (<span class="string">&quot;Scoop: &quot;</span> + (Scoop<span class="literal">-Proxy</span> <span class="variable">$args</span>[<span class="number">0</span>] <span class="variable">$used_proxy</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$args</span>[<span class="number">1</span>] <span class="operator">-eq</span> <span class="string">&quot;proxy&quot;</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$args</span>[<span class="number">0</span>] <span class="operator">-eq</span> <span class="string">&quot;set&quot;</span>) &#123;</span><br><span class="line">            [<span class="type">System.Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;DEFAULT_PROXY&#x27;</span>, <span class="variable">$args</span>[<span class="number">2</span>], [<span class="type">System.EnvironmentVariableTarget</span>]::User);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">elseif</span> (<span class="variable">$args</span>[<span class="number">0</span>] <span class="operator">-eq</span> <span class="string">&quot;get&quot;</span>) &#123;</span><br><span class="line">            [<span class="type">System.Environment</span>]::GetEnvironmentVariable(<span class="string">&#x27;DEFAULT_PROXY&#x27;</span>, [<span class="type">System.EnvironmentVariableTarget</span>]::User);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">elseif</span> (<span class="variable">$args</span>[<span class="number">0</span>] <span class="operator">-eq</span> <span class="string">&quot;del&quot;</span>) &#123;</span><br><span class="line">            [<span class="type">System.Environment</span>]::SetEnvironmentVariable(<span class="string">&#x27;DEFAULT_PROXY&#x27;</span>, <span class="string">&#x27;&#x27;</span>, [<span class="type">System.EnvironmentVariableTarget</span>]::User);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>关闭PowerShell的错误提示音：管理员权限运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-Service beep -StartupType disabled</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装和重装后恢复scoop"><a href="#安装和重装后恢复scoop" class="headerlink" title="安装和重装后恢复scoop"></a>安装和重装后恢复scoop</h2><p>安装scoop：</p>
+<blockquote>
+<p>iwr -useb get.scoop.sh | iex</p>
+</blockquote>
+<p>重装系统后，恢复scoop</p>
+<ol>
+<li><p>清除数据重装</p>
+<ol>
+<li><p>重装系统之前, 先完整复制用户目录下的 scoop 文件夹到别的地方</p>
+</li>
+<li><p>重装系统之后, 将 scoop 文件夹粘贴回去用户目录</p>
+</li>
+<li><p>在环境变量设置中, 新建一个用户变量, 名字为 SCOOP, 值为当前 scoop 文件夹的地址, 即:</p>
+   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\xxxx\scoop</span><br></pre></td></tr></table></figure></li>
+<li><p>允许脚本执行:</p>
+   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set-executionpolicy remotesigned -s currentuser</span><br></pre></td></tr></table></figure></li>
+<li><p>双击用户变量中的 path, 新建一个路径, 填入 :</p>
+   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%SCOOP%\shims</span><br></pre></td></tr></table></figure></li>
+<li><p>管理员权限 powershell 中运行:</p>
+   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop reset *</span><br></pre></td></tr></table></figure>
+<p> 即可恢复所有软件的正常使用.</p>
+</li>
+</ol>
+</li>
+<li><p>未清除数据重装</p>
+<p> 从上述第三步开始。</p>
+</li>
+</ol>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Nuget%E5%92%8CPowerShellGet"><span class="toc-number">1.</span> <span class="toc-text">安装Nuget和PowerShellGet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85oh-my-posh%E5%92%8Cposh-git"><span class="toc-number">2.</span> <span class="toc-text">安装oh-my-posh和posh-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">自己的一些配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E8%AE%BF%E9%97%AE"><span class="toc-number">3.1.</span> <span class="toc-text">快捷访问</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#z-lua"><span class="toc-number">3.2.</span> <span class="toc-text">z.lua</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%EF%BC%9A"><span class="toc-number">3.2.1.</span> <span class="toc-text">配置：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%90%86"><span class="toc-number">3.3.</span> <span class="toc-text">代理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E9%87%8D%E8%A3%85%E5%90%8E%E6%81%A2%E5%A4%8Dscoop"><span class="toc-number"></span> <span class="toc-text">安装和重装后恢复scoop</span></a>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/Powershell_plugin_installation/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/Powershell_plugin_installation/&text=PowerShell插件安装"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/Powershell_plugin_installation/&title=PowerShell插件安装"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/Powershell_plugin_installation/&is_video=false&description=PowerShell插件安装"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PowerShell插件安装&body=Check out this article: https://dasein.site/Powershell_plugin_installation/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/Powershell_plugin_installation/&title=PowerShell插件安装"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/Powershell_plugin_installation/&title=PowerShell插件安装"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/Powershell_plugin_installation/&title=PowerShell插件安装"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/Powershell_plugin_installation/&title=PowerShell插件安装"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/Powershell_plugin_installation/&name=PowerShell插件安装&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/Powershell_plugin_installation/&t=PowerShell插件安装"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2025
+    dasein
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BHVV9EYBS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1BHVV9EYBS');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?044a7fb2af1bb75e2f68047956457583";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "20013dd7d7f74496bf5798e8db132606"}'></script>
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

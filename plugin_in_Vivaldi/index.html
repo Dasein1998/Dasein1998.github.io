@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Vivaldi会对浏览器的数据进行加密，不能通过备份数据文件来达到备份数据的目的。所以每次重装Vivaldi的时候，需要给插件进行一定的配置，于是在此记录插件需要进行的配置。 油猴脚本通过Greasyfork下载脚本，常用的脚本有： Bilibili Evolved一个哔哩哔哩的强化脚本，可以修改哔哩哔哩的主题等。知乎增强 移除登录弹窗、默认收起回答、一键收起回答、收起当前回答&#x2F;评论（点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vivaldi插件配置">
+<meta property="og:url" content="https://dasein.site/plugin_in_Vivaldi/index.html">
+<meta property="og:site_name" content="Dasein">
+<meta property="og:description" content="Vivaldi会对浏览器的数据进行加密，不能通过备份数据文件来达到备份数据的目的。所以每次重装Vivaldi的时候，需要给插件进行一定的配置，于是在此记录插件需要进行的配置。 油猴脚本通过Greasyfork下载脚本，常用的脚本有： Bilibili Evolved一个哔哩哔哩的强化脚本，可以修改哔哩哔哩的主题等。知乎增强 移除登录弹窗、默认收起回答、一键收起回答、收起当前回答&#x2F;评论（点">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-03T06:14:14.000Z">
+<meta property="article:modified_time" content="2025-08-30T06:33:06.204Z">
+<meta property="article:author" content="dasein">
+<meta property="article:tag" content="折腾">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Vivaldi插件配置</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Dasein" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/git_foundation/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/proxy_in_WSL2/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/plugin_in_Vivaldi/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/plugin_in_Vivaldi/&text=Vivaldi插件配置"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/plugin_in_Vivaldi/&title=Vivaldi插件配置"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/plugin_in_Vivaldi/&is_video=false&description=Vivaldi插件配置"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vivaldi插件配置&body=Check out this article: https://dasein.site/plugin_in_Vivaldi/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/plugin_in_Vivaldi/&title=Vivaldi插件配置"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/plugin_in_Vivaldi/&title=Vivaldi插件配置"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/plugin_in_Vivaldi/&title=Vivaldi插件配置"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/plugin_in_Vivaldi/&title=Vivaldi插件配置"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/plugin_in_Vivaldi/&name=Vivaldi插件配置&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/plugin_in_Vivaldi/&t=Vivaldi插件配置"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">油猴脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Proxy-SwitchyOmega%E9%85%8D%E7%BD%AEAutoproxy"><span class="toc-number">2.</span> <span class="toc-text">Proxy SwitchyOmega配置Autoproxy</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Vivaldi插件配置
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">dasein</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-09-03T06:14:14.000Z" itemprop="datePublished">2021-09-03</time>
+        
+        (Updated: <time datetime="2025-08-30T06:33:06.204Z" itemprop="dateModified">2025-08-30</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E6%8A%98%E8%85%BE/" rel="tag">折腾</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Vivaldi会对浏览器的数据进行加密，不能通过备份数据文件来达到备份数据的目的。所以每次重装Vivaldi的时候，需要给插件进行一定的配置，于是在此记录插件需要进行的配置。</p>
+<h2 id="油猴脚本"><a href="#油猴脚本" class="headerlink" title="油猴脚本"></a><a target="_blank" rel="noopener" href="http://www.tampermonkey.net/">油猴脚本</a></h2><p>通过<a target="_blank" rel="noopener" href="https://greasyfork.org/">Greasyfork</a>下载脚本，常用的脚本有：</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/the1812/Bilibili-Evolved@master/bilibili-evolved.user.js">Bilibili Evolved</a>一个哔哩哔哩的强化脚本，可以修改哔哩哔哩的主题等。<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/419081-%E7%9F%A5%E4%B9%8E%E5%A2%9E%E5%BC%BA">知乎增强</a> 移除登录弹窗、默认收起回答、一键收起回答、收起当前回答&#x2F;评论（点击两侧空白处）、快捷回到顶部（右键两侧空白处）、屏蔽用户 (发布的内容)、屏蔽关键词（标题&#x2F;评论）、屏蔽指定类别（视频&#x2F;文章等）、屏蔽盐选内容、展开问题描述、置顶显示时间、完整问题时间、区分问题文章、直达问题按钮、默认高清原图、默认站外直链。<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/378351-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-csdn%E5%B9%BF%E5%91%8A%E5%AE%8C%E5%85%A8%E8%BF%87%E6%BB%A4-%E4%BA%BA%E6%80%A7%E5%8C%96%E8%84%9A%E6%9C%AC%E4%BC%98%E5%8C%96-%E4%B8%8D%E7%94%A8%E5%86%8D%E7%99%BB%E5%BD%95%E4%BA%86-%E8%AE%A9%E4%BD%A0%E4%BD%93%E9%AA%8C%E4%BB%A4%E4%BA%BA%E6%83%8A%E5%96%9C%E7%9A%84%E5%B4%AD%E6%96%B0csdn">CSDN</a> CSDN去广告<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/402279-%E8%99%8E%E7%89%99plus">虎牙Plus</a> 虎牙自动领取任务经验、开宝箱，复制直播流链接，简化页面，去广告，夜间模式，自动进入剧场模式,，订阅页面视频预览等</p>
+<h2 id="Proxy-SwitchyOmega配置Autoproxy"><a href="#Proxy-SwitchyOmega配置Autoproxy" class="headerlink" title="Proxy SwitchyOmega配置Autoproxy"></a>Proxy SwitchyOmega配置<a target="_blank" rel="noopener" href="https://github.com/aglent/autoproxy">Autoproxy</a></h2><p>黑名单模式：SwitchyOmega 扩展里新建 switch profile 模式（适用于Firefox 57+和Chrome）<br>规则列表地址填入 <a target="_blank" rel="noopener" href="https://git.io/gfw-list">https://git.io/gfw-list</a> 或 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/aglent/autoproxy/master/gfwlist.pac">https://raw.githubusercontent.com/aglent/autoproxy/master/gfwlist.pac</a><br>格式选择 autoproxy</p>
+<p>白名单模式：规则列表地址填入 <a target="_blank" rel="noopener" href="https://git.io/whitelistpac">https://git.io/whitelistpac</a> 或 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/aglent/autoproxy/master/whitelist.pac">https://raw.githubusercontent.com/aglent/autoproxy/master/whitelist.pac</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">油猴脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Proxy-SwitchyOmega%E9%85%8D%E7%BD%AEAutoproxy"><span class="toc-number">2.</span> <span class="toc-text">Proxy SwitchyOmega配置Autoproxy</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/plugin_in_Vivaldi/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/plugin_in_Vivaldi/&text=Vivaldi插件配置"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/plugin_in_Vivaldi/&title=Vivaldi插件配置"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/plugin_in_Vivaldi/&is_video=false&description=Vivaldi插件配置"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vivaldi插件配置&body=Check out this article: https://dasein.site/plugin_in_Vivaldi/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/plugin_in_Vivaldi/&title=Vivaldi插件配置"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/plugin_in_Vivaldi/&title=Vivaldi插件配置"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/plugin_in_Vivaldi/&title=Vivaldi插件配置"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/plugin_in_Vivaldi/&title=Vivaldi插件配置"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/plugin_in_Vivaldi/&name=Vivaldi插件配置&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/plugin_in_Vivaldi/&t=Vivaldi插件配置"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2025
+    dasein
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BHVV9EYBS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1BHVV9EYBS');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?044a7fb2af1bb75e2f68047956457583";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "20013dd7d7f74496bf5798e8db132606"}'></script>
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

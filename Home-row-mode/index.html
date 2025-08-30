@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Home row指的是asdfghjkl这一行，因为手在使用键盘的时候，80%以上的时间都是放在这一行上的，于是叫做Home row。还没有一个合适的中文翻译，只好叫主行。那Home row mode指的就是，主行模式。从所周知，使用软件是离不开Ctrl、Shift、Alt等控制键的。Home row mode就是想让人能把手放在主行上，就能使用控制键。它们做法很简单：把A S D F  J K">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Home-row-mode">
+<meta property="og:url" content="https://dasein.site/Home-row-mode/index.html">
+<meta property="og:site_name" content="Dasein">
+<meta property="og:description" content="Home row指的是asdfghjkl这一行，因为手在使用键盘的时候，80%以上的时间都是放在这一行上的，于是叫做Home row。还没有一个合适的中文翻译，只好叫主行。那Home row mode指的就是，主行模式。从所周知，使用软件是离不开Ctrl、Shift、Alt等控制键的。Home row mode就是想让人能把手放在主行上，就能使用控制键。它们做法很简单：把A S D F  J K">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.sa.net/2024/11/10/BVxWwAt8fLOC74I.png">
+<meta property="article:published_time" content="2024-11-11T06:14:14.000Z">
+<meta property="article:modified_time" content="2025-08-30T06:33:06.233Z">
+<meta property="article:author" content="dasein">
+<meta property="article:tag" content="折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.sa.net/2024/11/10/BVxWwAt8fLOC74I.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>使用Home-row-mode</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Dasein" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/Org-mode%E2%80%94function/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/reduce_initial_energy/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/Home-row-mode/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/Home-row-mode/&text=使用Home-row-mode"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/Home-row-mode/&title=使用Home-row-mode"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/Home-row-mode/&is_video=false&description=使用Home-row-mode"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=使用Home-row-mode&body=Check out this article: https://dasein.site/Home-row-mode/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/Home-row-mode/&title=使用Home-row-mode"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/Home-row-mode/&title=使用Home-row-mode"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/Home-row-mode/&title=使用Home-row-mode"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/Home-row-mode/&title=使用Home-row-mode"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/Home-row-mode/&name=使用Home-row-mode&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/Home-row-mode/&t=使用Home-row-mode"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kanata-%E6%9D%A5%E5%AE%9E%E7%8E%B0home-row-mode"><span class="toc-number">1.</span> <span class="toc-text">Kanata 来实现home row mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number">2.</span> <span class="toc-text">Reference</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        使用Home-row-mode
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">dasein</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-11-11T06:14:14.000Z" itemprop="datePublished">2024-11-11</time>
+        
+        (Updated: <time datetime="2025-08-30T06:33:06.233Z" itemprop="dateModified">2025-08-30</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E6%8A%98%E8%85%BE/" rel="tag">折腾</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Home row指的是asdfghjkl这一行，因为手在使用键盘的时候，80%以上的时间都是放在这一行上的，于是叫做Home row。<br>还没有一个合适的中文翻译，只好叫主行。<br>那Home row mode指的就是，主行模式。<br>从所周知，使用软件是离不开Ctrl、Shift、Alt等控制键的。<br>Home row mode就是想让人能把手放在主行上，就能使用控制键。<br>它们做法很简单：<br>把A S D F  J K L ; 这八个键，短按保持不变，长按改为控制键。<br><img src="https://cdn.sa.net/2024/11/10/BVxWwAt8fLOC74I.png" alt="homerowmode"></p>
+<p>这样的话，在大多数清况下使用控制键时，手指就不用离开主行。<br>减小了手指所需移动范围。<br>缺点也很明显：<br>需要熟悉短按和长按的节奏，以及要重新肌肉记忆新的快捷键按键方式。<br>把对更大范围的键位的肌肉记忆，改为了对小范围键位的组合记忆。<br>比如Ctrl-c 变为了;-c。（我把;改为了Ctrl）</p>
+<p>目前要使用home row mode有两种方法：</p>
+<ol>
+<li>键盘固件支持</li>
+</ol>
+<p>如果使用的是QMK、ZMK等开源固件，那可以在固件里改。具体参考：<a target="_blank" rel="noopener" href="https://precondition.github.io/home-row-mods#cags">A guide to home row mods</a><br>文章内的修改方式。</p>
+<ol start="2">
+<li>软件改键</li>
+</ol>
+<p>如kanata、KMonad 等全平台改键软件。<br>上文中提供了Kmonad的方法，但Kmonad在windows上的安装较为繁琐，于是我选择了Kanata作为改键软件来实现Home-row-mode。</p>
+<h2 id="Kanata-来实现home-row-mode"><a href="#Kanata-来实现home-row-mode" class="headerlink" title="Kanata 来实现home row mode"></a>Kanata 来实现home row mode</h2><p>Kanata的安装很简单：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop install kanata</span><br></pre></td></tr></table></figure>
+
+<p>运行之前，需要建立一个配置文件，在windows下的配置文件位于：<code>C:\Users\username\AppData\Roaming\kanata\kanata.kbd</code><br>（如果不存在这个位置，则需要新建这个文件夹和文件）<br>Kanate的Github仓库里自带一个Home-row-mode的配置文件：<a target="_blank" rel="noopener" href="https://github.com/jtroo/kanata/blob/main/cfg_samples/home-row-mod-advanced.kbd">kanata&#x2F;cfg_samples&#x2F;home-row-mod-advanced.kbd at main · jtroo&#x2F;kanata</a><br>可以下载后复制到上面的配置文件中。<br>然后在命令行中输入kanata，既可使用了。<br>以下既为官方提供的配置文件，其中asdfjkl;对应的控制键，可以由用户自行修改。</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">;; Home row mods QWERTY example with more complexity.</span></span><br><span class="line"><span class="comment">;; Some of the changes from the basic example:</span></span><br><span class="line"><span class="comment">;; - when a home row mod activates tap, the home row mods are disabled</span></span><br><span class="line"><span class="comment">;;   while continuing to type rapidly</span></span><br><span class="line"><span class="comment">;; - tap-hold-release helps make the hold action more responsive</span></span><br><span class="line"><span class="comment">;; - pressing another key on the same half of the keyboard</span></span><br><span class="line"><span class="comment">;;   as the home row mod will activate an early tap action</span></span><br><span class="line"></span><br><span class="line">(<span class="name">defcfg</span></span><br><span class="line">  process-unmapped-keys yes</span><br><span class="line">)</span><br><span class="line">(<span class="name">defsrc</span></span><br><span class="line">  a   s   d   f   j   k   l   <span class="comment">;</span></span><br><span class="line">)</span><br><span class="line">(<span class="name">defvar</span></span><br><span class="line">  <span class="comment">;; Note: consider using different time values for your different fingers.</span></span><br><span class="line">  <span class="comment">;; For example, your pinkies might be slower to release keys and index</span></span><br><span class="line">  <span class="comment">;; fingers faster.</span></span><br><span class="line">  tap-time <span class="number">200</span></span><br><span class="line">  hold-time <span class="number">150</span></span><br><span class="line"></span><br><span class="line">  left-hand-keys (</span><br><span class="line">    <span class="name">q</span> w e r <span class="literal">t</span></span><br><span class="line">    a s d f g</span><br><span class="line">    z x c v b</span><br><span class="line">  )</span><br><span class="line">  right-hand-keys (</span><br><span class="line">    <span class="name">y</span> u i o p</span><br><span class="line">    h j k l <span class="comment">;</span></span><br><span class="line">    n m , . /</span><br><span class="line">  )</span><br><span class="line">)</span><br><span class="line">(<span class="name">deflayer</span> base</span><br><span class="line">  @a  @s  @d  @f  @j  @k  @l  @<span class="comment">;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">(<span class="name">deflayer</span> nomods</span><br><span class="line">  a   s   d   f   j   k   l   <span class="comment">;</span></span><br><span class="line">)</span><br><span class="line">(<span class="name">deffakekeys</span></span><br><span class="line">  to-base (<span class="name">layer-switch</span> base)</span><br><span class="line">)</span><br><span class="line">(<span class="name">defalias</span></span><br><span class="line">  tap (<span class="name">multi</span></span><br><span class="line">    (<span class="name">layer-switch</span> nomods)</span><br><span class="line">    (<span class="name">on-idle-fakekey</span> to-base tap <span class="number">20</span>)</span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line">  a (<span class="name">tap-hold-release-keys</span> $tap-time $hold-time (<span class="name">multi</span> a @tap) lmet $left-hand-keys)</span><br><span class="line">  s (<span class="name">tap-hold-release-keys</span> $tap-time $hold-time (<span class="name">multi</span> s @tap) lalt $left-hand-keys)</span><br><span class="line">  d (<span class="name">tap-hold-release-keys</span> $tap-time $hold-time (<span class="name">multi</span> d @tap) lctl $left-hand-keys)</span><br><span class="line">  f (<span class="name">tap-hold-release-keys</span> $tap-time $hold-time (<span class="name">multi</span> f @tap) lsft $left-hand-keys)</span><br><span class="line">  j (<span class="name">tap-hold-release-keys</span> $tap-time $hold-time (<span class="name">multi</span> j @tap) rsft $right-hand-keys)</span><br><span class="line">  k (<span class="name">tap-hold-release-keys</span> $tap-time $hold-time (<span class="name">multi</span> k @tap) rctl $right-hand-keys)</span><br><span class="line">  l (<span class="name">tap-hold-release-keys</span> $tap-time $hold-time (<span class="name">multi</span> l @tap) ralt $right-hand-keys)</span><br><span class="line">  <span class="comment">; (tap-hold-release-keys $tap-time $hold-time (multi ; @tap) rmet $right-hand-keys)</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="https://github.com/jtroo/kanata">jtroo&#x2F;kanata: Improve keyboard comfort and usability with advanced customization</a></p>
+<p><a target="_blank" rel="noopener" href="https://precondition.github.io/home-row-mods#cags">A guide to home row mods</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kanata-%E6%9D%A5%E5%AE%9E%E7%8E%B0home-row-mode"><span class="toc-number">1.</span> <span class="toc-text">Kanata 来实现home row mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number">2.</span> <span class="toc-text">Reference</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/Home-row-mode/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/Home-row-mode/&text=使用Home-row-mode"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/Home-row-mode/&title=使用Home-row-mode"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/Home-row-mode/&is_video=false&description=使用Home-row-mode"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=使用Home-row-mode&body=Check out this article: https://dasein.site/Home-row-mode/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/Home-row-mode/&title=使用Home-row-mode"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/Home-row-mode/&title=使用Home-row-mode"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/Home-row-mode/&title=使用Home-row-mode"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/Home-row-mode/&title=使用Home-row-mode"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/Home-row-mode/&name=使用Home-row-mode&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/Home-row-mode/&t=使用Home-row-mode"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2025
+    dasein
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BHVV9EYBS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1BHVV9EYBS');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?044a7fb2af1bb75e2f68047956457583";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "20013dd7d7f74496bf5798e8db132606"}'></script>
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

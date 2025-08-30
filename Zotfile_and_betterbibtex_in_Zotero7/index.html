@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Zotero-attanger使用在 Zotero7 中，Zotfile无法使用（开发者说只支持到 Zotero6 ）。使用的是国内开发者开发的MuiseDestiny&#x2F;zotero-attanger: Attachment Manager for Zotero。 它调用的重名命方式为 Zotero 内置的文件名格式。为保证文件名和 BibTex 的 citekey 保持一致，并保持一定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zotero 使用Zotfile（Attanger) 和Better BibTex">
+<meta property="og:url" content="https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/index.html">
+<meta property="og:site_name" content="Dasein">
+<meta property="og:description" content="Zotero-attanger使用在 Zotero7 中，Zotfile无法使用（开发者说只支持到 Zotero6 ）。使用的是国内开发者开发的MuiseDestiny&#x2F;zotero-attanger: Attachment Manager for Zotero。 它调用的重名命方式为 Zotero 内置的文件名格式。为保证文件名和 BibTex 的 citekey 保持一致，并保持一定">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.sa.net/2024/10/02/uLWaUiVTbwet1hI.png">
+<meta property="og:image" content="https://cdn.sa.net/2024/10/02/p7OWGEekNhmHbic.png">
+<meta property="article:published_time" content="2024-10-02T04:12:12.000Z">
+<meta property="article:modified_time" content="2025-08-30T06:33:06.230Z">
+<meta property="article:author" content="dasein">
+<meta property="article:tag" content="折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.sa.net/2024/10/02/uLWaUiVTbwet1hI.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Zotero 使用Zotfile（Attanger) 和Better BibTex</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Dasein" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/Denote_in_Emacs/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/ObsidiantoLogSeq/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&text=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&title=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&is_video=false&description=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Zotero 使用Zotfile（Attanger) 和Better BibTex&body=Check out this article: https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&title=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&title=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&title=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&title=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&name=Zotero 使用Zotfile（Attanger) 和Better BibTex&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&t=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Zotero-attanger%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">Zotero-attanger使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Better-BibTex%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">Better BibTex使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number">3.</span> <span class="toc-text">Reference</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Zotero 使用Zotfile（Attanger) 和Better BibTex
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">dasein</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-10-02T04:12:12.000Z" itemprop="datePublished">2024-10-02</time>
+        
+        (Updated: <time datetime="2025-08-30T06:33:06.230Z" itemprop="dateModified">2025-08-30</time>)
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E6%8A%98%E8%85%BE/" rel="tag">折腾</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Zotero-attanger使用"><a href="#Zotero-attanger使用" class="headerlink" title="Zotero-attanger使用"></a>Zotero-attanger使用</h2><p>在 Zotero7 中，Zotfile无法使用（开发者说只支持到 Zotero6 ）。使用的是国内开发者开发的<a target="_blank" rel="noopener" href="https://github.com/MuiseDestiny/zotero-attanger">MuiseDestiny&#x2F;zotero-attanger: Attachment Manager for Zotero</a>。</p>
+<p>它调用的重名命方式为 Zotero 内置的文件名格式。<br><img src="https://cdn.sa.net/2024/10/02/uLWaUiVTbwet1hI.png"><br>为保证文件名和 BibTex 的 citekey 保持一致，并保持一定的可读性，将其写为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;authors editors max=&quot;1&quot;suffix=&quot;_&quot;&#125;&#125;&#123;&#123;year suffix=&quot;_&quot;&#125;&#125;&#123;&#123; title truncate=&quot;1000&quot; case=&quot;hyphen&quot;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>既“第一作者_年份_文章名”，文章名的单词用-连接。<br>使用 zotero-attanger，既可将 pdf 附件重名命为“第一作者_年份_文章名.pdf”。比如图中所示的“Liu_2020_12.6-w-single-frequency-continuous-wave-671-nm-laser-with-an-external-second-harmonic-generation-cavity.pdf”。<br>其它设置参数可参考<a target="_blank" rel="noopener" href="https://www.zotero.org/support/file_renaming">file_renaming [Zotero Documentation]</a>。</p>
+<p>其设置的重点在于，用<code>&#123;&#123;&#125;&#125;</code> 包起来的 Variables 和 Parameters，形式如<code>&#123;&#123;Variables  Parameters=Value&#125;&#125;</code>。</p>
+<h2 id="Better-BibTex使用"><a href="#Better-BibTex使用" class="headerlink" title="Better BibTex使用"></a>Better BibTex使用</h2><p> <a target="_blank" rel="noopener" href="https://github.com/retorquere/zotero-better-bibtex">Better BibTex</a>设置如下图：<br><img src="https://cdn.sa.net/2024/10/02/p7OWGEekNhmHbic.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Auth]_[year]_[Title:nopunct:condense,-:lower]</span><br></pre></td></tr></table></figure>
+
+<p>这种设置下，它输出的 BibTex 中的 citekey 则为“第一作者_年份_文章名”，与重命名后的pdf文件名相同。<br>有一个需要注意的点，Better BibTex设置中有一项为：强制引用为纯文本。<br>默认是勾选的，所有的中文作者、中文题目，都会被转为拼音。<br>但为和 Zotero 的文件名称保持一致，应取消勾选。（如上图所示）<br>其余 citekey 可参考<a target="_blank" rel="noopener" href="https://docs.jabref.org/setup/citationkeypatterns">Customize the citation key generator | JabRef</a>和<a target="_blank" rel="noopener" href="https://docs.jabref.org/setup/citationkeypatterns">Customize the citation key generator | JabRef</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lc411J7gQ/">【从零搭建Emacs个人知识库】Zotero：简单实用的科研文献管理器_哔哩哔哩_bilibili</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Zotero-attanger%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">Zotero-attanger使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Better-BibTex%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">Better BibTex使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number">3.</span> <span class="toc-text">Reference</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&text=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&title=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&is_video=false&description=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Zotero 使用Zotfile（Attanger) 和Better BibTex&body=Check out this article: https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&title=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&title=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&title=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&title=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&name=Zotero 使用Zotfile（Attanger) 和Better BibTex&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/Zotfile_and_betterbibtex_in_Zotero7/&t=Zotero 使用Zotfile（Attanger) 和Better BibTex"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2025
+    dasein
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BHVV9EYBS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1BHVV9EYBS');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?044a7fb2af1bb75e2f68047956457583";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "20013dd7d7f74496bf5798e8db132606"}'></script>
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

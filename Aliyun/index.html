@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="过年后买了台阿里云的学生机，1核2g 1M带宽。 已搭建：  TinyTinyRSS Frp  未搭建（未完成）：  Terraria私服 OLAINDEX (缺个域名)  在本文简要介绍一下以上内容。 已完成一.TinyTinyRSSRSS（全称：RDF Site Summary；Really Simple Syndication[2]），中文译作简易信息聚合[3]，也称聚合内容[4]，是一种消">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云学生机折腾记录">
+<meta property="og:url" content="https://dasein.site/Aliyun/index.html">
+<meta property="og:site_name" content="Dasein">
+<meta property="og:description" content="过年后买了台阿里云的学生机，1核2g 1M带宽。 已搭建：  TinyTinyRSS Frp  未搭建（未完成）：  Terraria私服 OLAINDEX (缺个域名)  在本文简要介绍一下以上内容。 已完成一.TinyTinyRSSRSS（全称：RDF Site Summary；Really Simple Syndication[2]），中文译作简易信息聚合[3]，也称聚合内容[4]，是一种消">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-31T10:18:18.000Z">
+<meta property="article:modified_time" content="2025-08-30T06:33:06.189Z">
+<meta property="article:author" content="dasein">
+<meta property="article:tag" content="read,think">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>阿里云学生机折腾记录</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Dasein" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/Way_to_search/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/Karma/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/Aliyun/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/Aliyun/&text=阿里云学生机折腾记录"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/Aliyun/&title=阿里云学生机折腾记录"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/Aliyun/&is_video=false&description=阿里云学生机折腾记录"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=阿里云学生机折腾记录&body=Check out this article: https://dasein.site/Aliyun/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/Aliyun/&title=阿里云学生机折腾记录"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/Aliyun/&title=阿里云学生机折腾记录"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/Aliyun/&title=阿里云学生机折腾记录"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/Aliyun/&title=阿里云学生机折腾记录"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/Aliyun/&name=阿里云学生机折腾记录&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/Aliyun/&t=阿里云学生机折腾记录"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%B2%E5%AE%8C%E6%88%90"><span class="toc-number">1.</span> <span class="toc-text">已完成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-TinyTinyRSS"><span class="toc-number">1.1.</span> <span class="toc-text">一.TinyTinyRSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-Frp"><span class="toc-number">1.2.</span> <span class="toc-text">二.Frp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-Gitea"><span class="toc-number">1.3.</span> <span class="toc-text">三.Gitea</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%85%E5%AE%8C%E6%88%90"><span class="toc-number">2.</span> <span class="toc-text">待完成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Terraria%E7%A7%81%E6%9C%8D"><span class="toc-number">2.0.1.</span> <span class="toc-text">1. Terraria私服</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-OLAINDEX"><span class="toc-number">2.0.2.</span> <span class="toc-text">2. OLAINDEX</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%BB%BA%E7%AB%99"><span class="toc-number">2.1.</span> <span class="toc-text">3. 建站</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        阿里云学生机折腾记录
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">dasein</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-08-31T10:18:18.000Z" itemprop="datePublished">2020-08-31</time>
+        
+        (Updated: <time datetime="2025-08-30T06:33:06.189Z" itemprop="dateModified">2025-08-30</time>)
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>过年后买了台阿里云的学生机，1核2g 1M带宽。</p>
+<p>已搭建：</p>
+<ol>
+<li>TinyTinyRSS</li>
+<li>Frp</li>
+</ol>
+<p>未搭建（未完成）：</p>
+<ol>
+<li>Terraria私服</li>
+<li>OLAINDEX (缺个域名)</li>
+</ol>
+<p>在本文简要介绍一下以上内容。</p>
+<h1 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h1><h2 id="一-TinyTinyRSS"><a href="#一-TinyTinyRSS" class="headerlink" title="一.TinyTinyRSS"></a>一.TinyTinyRSS</h2><p><strong>RSS</strong>（全称：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Resource_Description_Framework">RDF</a> Site Summary；Really Simple Syndication[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/RSS#cite_note-powers-2003-1-2">2]</a>），中文译作<strong>简易信息聚合</strong>[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/RSS#cite_note-3">3]</a>，也称<strong>聚合内容</strong>[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/RSS#cite_note-%E5%BC%A0%E9%94%902015-4">4]</a>，是一种<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%B6%88%E6%81%AF%E4%BE%86%E6%BA%90">消息来源</a>格式规范，用以<strong>聚合经常发布更新资料的网站</strong>，例如<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%83%A8%E8%90%BD%E6%A0%BC">博客</a>文章、新闻、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%9F%B3%E8%A8%8A">音频</a>或<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%A6%96%E8%A8%8A">视频</a>的网摘。RSS文件（或称做摘要、网络摘要、或频更新，提供到频道）包含全文或是节录的文字，再加上发布者所订阅之网摘资料和授权的元数据。简单来说 RSS 能够让用户订阅个人网站个人博客，当订阅的网站有新文章是能够获得通知                                      —摘自RSS的WiKi 词条</p>
+<p>RSS的火爆已经是21世纪初期的事情了，在Google Reader于2013年停止服务宣告RSS退出历史舞台。在新闻媒体，微博，今日头条等聚合类资讯应用占领绝大多数市场的时代，只有极少的用户会继续使用RSS。现在很多平台的内容也不支持RSS订阅，比如知乎，微信公众号，B站等大多数现代媒体平台，支持RSS大多是个人或小团体的资讯平台，如个人博客，爱范儿，煎蛋等。（曾经有一段时间 有第三方平台提供微信公众号文章的RSS订阅，后来被微信封杀了，比如16，17年的微广场）现在有人做了个开源的RSS生成器 <a target="_blank" rel="noopener" href="https://docs.rsshub.app/">RSSHub</a> ， 里面聚合了上百家网站的RSS订阅方式，包括微信公众号，知乎文章专栏等。</p>
+<p>与诸如Inoreader等RSS服务不同，TinyTinyRSS是在自己服务器搭建的RSS服务，功能足够，配合RSSHub使用可以订阅很多个性化内容，ttrss可以在浏览器中或者适配的移动端软件中使用，我电脑端直接使用网页版，手机用的FeedMe。浏览器还可以安装RSSHub的拓展插件，通过插件连接自己的TinyTinyRss服务，在浏览可以RSS订阅的网站时可以一键通过RSSHub和TinyTinyRss的联动来将网站添加到订阅源中。</p>
+<h2 id="二-Frp"><a href="#二-Frp" class="headerlink" title="二.Frp"></a>二.Frp</h2><p>我有一个阿里云的学生机，也就有了一个公网的IP。于是可以利用我的公网IP实现内网穿透。总所周至，ipv4地址在几年前就已经用完了，很多人的家里都没有公网IP，都是运营商的大局域网分配的IP地址。而在局域网内像要访问其他局域网，比如在家要访问学校的设备，就无法直接连接，此时需要一个公网的服务器做节点，两台或多台处在自己的局域网的设备可以通过与公网服务器连接来达成相互连接。通过这个方法可以随时随地的远程控制处在不同局域网的设备。</p>
+<p>Frp就是达成这个链接方式的工具。 在服务器客户端分别安装<a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">Frp</a>，编辑ini文件，自定义端口和验证方式并让其后台运行。就完成了服务器和客户端的链接。此时可以通过访问公网地址和相应端口来访问局域网的设备。通过Remote Desktop（RDP协议）可以远程控制windows系统，通过ssh控制linux系统，可以通过HTTP(S)控制家里的路由器。</p>
+<h2 id="三-Gitea"><a href="#三-Gitea" class="headerlink" title="三.Gitea"></a>三.Gitea</h2><p>Gitea是用go写的自建开源Git服务软件。可以较为容易的在自己的服务器上搭建，可以使用sqlite3作为数据库。</p>
+<p>主要思路：</p>
+<ol>
+<li>建立名为git的用户，并授于权限</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser --system --group --disabled-password --shell /bin/bash --home /home/git --gecos &#x27;Git Version Control&#x27; git</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>创建文件</p>
+</li>
+<li><pre><code>
+sudo mkdir -p /var/lib/gitea/&#123;custom,data,log&#125;
+sudo chown -R git:git /var/lib/gitea/
+sudo chmod -R 750 /var/lib/gitea/
+sudo mkdir /etc/gitea
+sudo chown root:git /etc/gitea
+sudo chmod 770 /etc/gitea
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 下载gitea 可以去https://dl.gitea.io 中查看最新的版本</span><br><span class="line"></span><br><span class="line">5. ```</span><br><span class="line">   wget -O gitea https://dl.gitea.io/gitea/1.13.6/gitea-1.13.6-linux-amd64</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>将程序移到  &#x2F;usr&#x2F;local&#x2F;bin</p>
+</li>
+<li><pre><code>mv gitea /usr/local/bin
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">8. 下载写好的systemd代码并放入/etc/systemd/system/文件夹</span><br><span class="line"></span><br><span class="line">9. ```</span><br><span class="line">   sudo wget https://raw.githubusercontent.com/go-gitea/gitea/master/contrib/systemd/gitea.service -P /etc/systemd/system/</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>启动gitea的systemd服务</p>
+</li>
+<li><pre><code>sudo systemctl daemon-reload
+sudo systemctl enable --now gitea
+</code></pre>
+</li>
+<li><p>默认会在3000端口开启网页控制面板。可以通过 服务器地址:3000 访问</p>
+</li>
+</ol>
+<p>ps：配置文件位置&#x2F;etc&#x2F;gitea&#x2F;app.ini</p>
+<h1 id="待完成"><a href="#待完成" class="headerlink" title="待完成"></a>待完成</h1><h3 id="1-Terraria私服"><a href="#1-Terraria私服" class="headerlink" title="1. Terraria私服"></a>1. Terraria私服</h3><p>《<strong>泰拉瑞亚</strong>》（英语：<strong>Terraria</strong>）是一款2D<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%B2%99%E7%9B%92%E7%B1%BB%E6%B8%B8%E6%88%8F">沙盒模拟游戏</a>，由Re-Logic开发。游戏2011年5月16日最初发布在<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Microsoft_Windows">Windows</a>平台，此后，陆续发布了支持其他操作系统、主机、智能手机和平板电脑等的版本。泰拉瑞亚的游戏特色是在一个<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%BF%87%E7%A8%8B%E7%94%9F%E6%88%90">随机生成</a>的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/2D">2D</a>世界里探索、创造、建筑，并与各种生物战斗。游戏发布时受到普遍积极的评价，其沙盒元素颇受好评。截止到2020年4月累积销量逾3000万。                        —摘自Terraria的WiKi 词条</p>
+<p><a target="_blank" rel="noopener" href="https://terraria-zh.gamepedia.com/%E6%9C%8D%E5%8A%A1%E5%99%A8#.E5.BC.80.E6.9C.8D.E6.96.B9.E6.B3.95_.28Linux.29">Terraria</a> 官方wiki提供了自建服务器的方法和<a target="_blank" rel="noopener" href="https://terraria.org/system/dedicated_servers/archives/000/000/039/original/terraria-server-1405.zip?159130136">安装包</a> 。看网上说法是搭建需要1.5g左右内存，支持两-三人玩耍。因为暂时没有玩这个的兴趣，于是先搁置了。</p>
+<h3 id="2-OLAINDEX"><a href="#2-OLAINDEX" class="headerlink" title="2. OLAINDEX"></a>2. OLAINDEX</h3><p>OLAINDEX是挂载Onedrive在网页上的工具，可以利用ondrive的教育版和商业版的1T的空间当作一个下载站。</p>
+<p>但由于我没有备案的域名不能进行TLS加密，于是卡在了最后一步。等哪天有闲情再折腾。</p>
+<h2 id="3-建站"><a href="#3-建站" class="headerlink" title="3. 建站"></a>3. 建站</h2><p>本博客是基于HEXO框架和GitHub Pages搭建的。如果在服务器上可搭建Wordpress等动态博客并绑定域名，同时可以给ttrss绑定域名。（国内域名需要备案，我嫌麻烦就一直没去）</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%B2%E5%AE%8C%E6%88%90"><span class="toc-number">1.</span> <span class="toc-text">已完成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-TinyTinyRSS"><span class="toc-number">1.1.</span> <span class="toc-text">一.TinyTinyRSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-Frp"><span class="toc-number">1.2.</span> <span class="toc-text">二.Frp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-Gitea"><span class="toc-number">1.3.</span> <span class="toc-text">三.Gitea</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%85%E5%AE%8C%E6%88%90"><span class="toc-number">2.</span> <span class="toc-text">待完成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Terraria%E7%A7%81%E6%9C%8D"><span class="toc-number">2.0.1.</span> <span class="toc-text">1. Terraria私服</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-OLAINDEX"><span class="toc-number">2.0.2.</span> <span class="toc-text">2. OLAINDEX</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%BB%BA%E7%AB%99"><span class="toc-number">2.1.</span> <span class="toc-text">3. 建站</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/Aliyun/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/Aliyun/&text=阿里云学生机折腾记录"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/Aliyun/&title=阿里云学生机折腾记录"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/Aliyun/&is_video=false&description=阿里云学生机折腾记录"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=阿里云学生机折腾记录&body=Check out this article: https://dasein.site/Aliyun/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/Aliyun/&title=阿里云学生机折腾记录"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/Aliyun/&title=阿里云学生机折腾记录"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/Aliyun/&title=阿里云学生机折腾记录"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/Aliyun/&title=阿里云学生机折腾记录"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/Aliyun/&name=阿里云学生机折腾记录&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/Aliyun/&t=阿里云学生机折腾记录"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2025
+    dasein
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BHVV9EYBS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1BHVV9EYBS');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?044a7fb2af1bb75e2f68047956457583";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "20013dd7d7f74496bf5798e8db132606"}'></script>
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Denote (denote.el) | Protesilaos Stavrou是一个以命名为核心，基于Org mode的Emacs笔记插件。作者是 Protesilaos ，一位哲学家和Emacs用户。他在自己的博客里说到： 1In a manner of speaking, I just talk to programmers about philosophy and to philosoph">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Emacs中使用中Denote做笔记">
+<meta property="og:url" content="https://dasein.site/Denote_in_Emacs/index.html">
+<meta property="og:site_name" content="Dasein">
+<meta property="og:description" content="Denote (denote.el) | Protesilaos Stavrou是一个以命名为核心，基于Org mode的Emacs笔记插件。作者是 Protesilaos ，一位哲学家和Emacs用户。他在自己的博客里说到： 1In a manner of speaking, I just talk to programmers about philosophy and to philosoph">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-20T04:12:12.000Z">
+<meta property="article:modified_time" content="2025-08-30T06:33:06.231Z">
+<meta property="article:author" content="dasein">
+<meta property="article:tag" content="折腾">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>在Emacs中使用中Denote做笔记</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Dasein" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/Emacs_on_Windows/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/Zotfile_and_betterbibtex_in_Zotero7/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/Denote_in_Emacs/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/Denote_in_Emacs/&text=在Emacs中使用中Denote做笔记"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/Denote_in_Emacs/&title=在Emacs中使用中Denote做笔记"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/Denote_in_Emacs/&is_video=false&description=在Emacs中使用中Denote做笔记"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=在Emacs中使用中Denote做笔记&body=Check out this article: https://dasein.site/Denote_in_Emacs/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/Denote_in_Emacs/&title=在Emacs中使用中Denote做笔记"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/Denote_in_Emacs/&title=在Emacs中使用中Denote做笔记"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/Denote_in_Emacs/&title=在Emacs中使用中Denote做笔记"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/Denote_in_Emacs/&title=在Emacs中使用中Denote做笔记"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/Denote_in_Emacs/&name=在Emacs中使用中Denote做笔记&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/Denote_in_Emacs/&t=在Emacs中使用中Denote做笔记"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        在Emacs中使用中Denote做笔记
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">dasein</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-10-20T04:12:12.000Z" itemprop="datePublished">2024-10-20</time>
+        
+        (Updated: <time datetime="2025-08-30T06:33:06.231Z" itemprop="dateModified">2025-08-30</time>)
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E6%8A%98%E8%85%BE/" rel="tag">折腾</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><a target="_blank" rel="noopener" href="https://protesilaos.com/emacs/denote">Denote (denote.el) | Protesilaos Stavrou</a>是一个以命名为核心，基于Org mode的Emacs笔记插件。作者是 Protesilaos ，一位哲学家和Emacs用户。<br>他在<a target="_blank" rel="noopener" href="https://protesilaos.com/about/">自己的博客</a>里说到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">In a manner of speaking, I just talk to programmers about philosophy and to philosophers about programming.</span><br></pre></td></tr></table></figure>
+
+<p>Denote 的核心理念在于它的命名思路，Protesilaos 认为文件名需要清楚表达文件内容，而不需要额外数据参考。这不仅适用于笔记，也适用于所有的视频、图片等文件。Denote默认对笔记的命名为：日期和时间–标题__关键词.文件格式（DATE–TITLE__KEYWORDS.EXT）。<br>其中日期为“年月日T时分秒”的一串数字和字母（YYYYMMDDTHHmmss），比如这个笔记的创建时间为20241020T121212.<br>在Denote中，每一个文件的区分以创建时间为主，不同的时间表示不同的文件，每一个文件以它的创建时间不变量。<br>这点和Denote的核心功能：“引用”有关，假如有一个文件为20241020T121212–Denote_in_Emacs__Emacs.md。在其它笔记引用这个文件时，Denote是用20241020T121212来引用这个文件的。<br>这样有一个优点：用户可以用任何软件随意修改文件的名称和关键词，而无需在修改后去其它文件中同步修改引用时的文件名。<br>缺点就是：不能在同一秒创建多个文件，Denote无法区分同一秒的其它文件。<br>Denote的基本配置如下：</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">use-package</span> denote</span><br><span class="line">  <span class="symbol">:ensure</span> <span class="literal">t</span></span><br><span class="line">  <span class="symbol">:hook</span> (<span class="name">dired-mode</span> . denote-dired-mode)</span><br><span class="line">  <span class="symbol">:bind</span></span><br><span class="line">  ((<span class="string">&quot;C-c n n&quot;</span> . denote)</span><br><span class="line">   (<span class="string">&quot;C-c n r&quot;</span> . denote-rename-file)</span><br><span class="line">   (<span class="string">&quot;C-c n l&quot;</span> . denote-link-or-create)</span><br><span class="line">   (<span class="string">&quot;C-c n b&quot;</span> . denote-backlinks)</span><br><span class="line">   (<span class="string">&quot;C-c n k&quot;</span> . denote-rename-file-keywords)</span><br><span class="line">   (<span class="string">&quot;C-c n s&quot;</span> . denote-silo-extras-open-or-create)</span><br><span class="line">   (<span class="string">&quot;C-c n o&quot;</span> . denote-open-or-create)</span><br><span class="line">   )</span><br><span class="line">  <span class="symbol">:config</span></span><br><span class="line">  (<span class="name">setq</span> denote-directory (<span class="name">expand-file-name</span> <span class="string">&quot;~/note&quot;</span>))<span class="comment">;;主笔记库的位置</span></span><br><span class="line">  (<span class="name">setq</span> denote-rename-confirmations <span class="literal">nil</span>) <span class="comment">;;修改名字时免确认</span></span><br><span class="line">  <span class="comment">;;(setq denote-file-type &#x27;org)</span></span><br><span class="line">  (<span class="name">denote-rename-buffer-mode</span> <span class="number">1</span>)</span><br><span class="line">  (<span class="name">require</span> &#x27;denote-silo-extras) <span class="comment">;;添加对次笔记库的支持</span></span><br><span class="line">  (<span class="name">setq</span> denote-silo-extras-directories   <span class="comment">;;其它笔记库的路径</span></span><br><span class="line"> `(<span class="string">&quot;~/note1/&quot;</span></span><br><span class="line">  <span class="string">&quot;~/note2/&quot;</span>))</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+
+<p>由于，Denote 使用了xargs作为反向链接的搜索工具，而Windows不自带xargs工具。<br>但Git for windows中自带xargs，于是把git的库填写到emacs的Path中，是一种可行的方法。</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">when</span> (<span class="name">eq</span> system-type &#x27;windows-nt) <span class="comment">;; windows specific settings</span></span><br><span class="line">   (<span class="name">setenv</span> <span class="string">&quot;PATH&quot;</span> (<span class="name">concat</span> (<span class="name">getenv</span> <span class="string">&quot;PATH&quot;</span>) <span class="string">&quot;;&quot;</span> <span class="string">&quot;C:\\Program Files\\Git\\usr\\bin&quot;</span>)))<span class="comment">;;git的默认安装路径</span></span><br></pre></td></tr></table></figure>
+
+
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://dasein.site/Denote_in_Emacs/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://dasein.site/Denote_in_Emacs/&text=在Emacs中使用中Denote做笔记"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://dasein.site/Denote_in_Emacs/&title=在Emacs中使用中Denote做笔记"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dasein.site/Denote_in_Emacs/&is_video=false&description=在Emacs中使用中Denote做笔记"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=在Emacs中使用中Denote做笔记&body=Check out this article: https://dasein.site/Denote_in_Emacs/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://dasein.site/Denote_in_Emacs/&title=在Emacs中使用中Denote做笔记"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://dasein.site/Denote_in_Emacs/&title=在Emacs中使用中Denote做笔记"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://dasein.site/Denote_in_Emacs/&title=在Emacs中使用中Denote做笔记"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://dasein.site/Denote_in_Emacs/&title=在Emacs中使用中Denote做笔记"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://dasein.site/Denote_in_Emacs/&name=在Emacs中使用中Denote做笔记&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://dasein.site/Denote_in_Emacs/&t=在Emacs中使用中Denote做笔记"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2025
+    dasein
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/Dasein1998/Dasein1998.github.io">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BHVV9EYBS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1BHVV9EYBS');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?044a7fb2af1bb75e2f68047956457583";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "20013dd7d7f74496bf5798e8db132606"}'></script>
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
